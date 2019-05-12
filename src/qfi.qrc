@@ -1,0 +1,72 @@
+<RCC>
+    <qresource prefix="/qfi/">
+        <file>images/adi/adi_back.svg</file>
+        <file>images/adi/adi_case.svg</file>
+        <file>images/adi/adi_face.svg</file>
+        <file>images/adi/adi_ring.svg</file>
+        
+        <file>images/alt/alt_case.svg</file>
+        <file>images/alt/alt_face_1.svg</file>
+        <file>images/alt/alt_face_2.svg</file>
+        <file>images/alt/alt_face_3.svg</file>
+        <file>images/alt/alt_hand_1.svg</file>
+        <file>images/alt/alt_hand_2.svg</file>
+        
+        <file>images/asi/asi_case.svg</file>
+        <file>images/asi/asi_face.svg</file>
+        <file>images/asi/asi_hand.svg</file>
+        
+        <file>images/hsi/hsi_case.svg</file>
+        <file>images/hsi/hsi_face.svg</file>
+        
+        <file>images/nav/nav_back.svg</file>
+        <file>images/nav/nav_mask.svg</file>
+        <file>images/nav/nav_mark.svg</file>
+        <file>images/nav/nav_brg_arrow.svg</file>
+        <file>images/nav/nav_crs_arrow.svg</file>
+        <file>images/nav/nav_dev_bar.svg</file>
+        <file>images/nav/nav_dev_scale.svg</file>
+        <file>images/nav/nav_hdg_bug.svg</file>
+        <file>images/nav/nav_hdg_scale.svg</file>
+        
+        <file>images/pfd/pfd_back.svg</file>
+        <file>images/pfd/pfd_mask.svg</file>
+        <file>images/pfd/pfd_adi_back.svg</file>
+        <file>images/pfd/pfd_adi_barh.svg</file>
+        <file>images/pfd/pfd_adi_barv.svg</file>
+        <file>images/pfd/pfd_adi_doth.svg</file>
+        <file>images/pfd/pfd_adi_dotv.svg</file>
+        <file>images/pfd/pfd_adi_ladd.svg</file>
+        <file>images/pfd/pfd_adi_mark.svg</file>
+        <file>images/pfd/pfd_adi_mask.svg</file>
+        <file>images/pfd/pfd_adi_path.svg</file>
+        <file>images/pfd/pfd_adi_roll.svg</file>
+        <file>images/pfd/pfd_adi_scaleh.svg</file>
+        <file>images/pfd/pfd_adi_scalev.svg</file>
+        <file>images/pfd/pfd_adi_slip.svg</file>
+        <file>images/pfd/pfd_adi_turn.svg</file>
+        <file>images/pfd/pfd_alt_back.svg</file>
+        <file>images/pfd/pfd_alt_frame.svg</file>
+        <file>images/pfd/pfd_alt_ground.svg</file>
+        <file>images/pfd/pfd_alt_scale.svg</file>
+        <file>images/pfd/pfd_asi_back.svg</file>
+        <file>images/pfd/pfd_asi_frame.svg</file>
+        <file>images/pfd/pfd_asi_scale.svg</file>
+        <file>images/pfd/pfd_hsi_back.svg</file>
+        <file>images/pfd/pfd_hsi_face.svg</file>
+        <file>images/pfd/pfd_hsi_marks.svg</file>
+        <file>images/pfd/pfd_vsi_arrow.svg</file>
+        <file>images/pfd/pfd_vsi_scale.svg</file>
+		
+		<file>images/tc/tc_case.svg</file>
+        <file>images/tc/tc_back.svg</file>
+        <file>images/tc/tc_ball.svg</file>
+		<file>images/tc/tc_face_1.svg</file>
+		<file>images/tc/tc_face_2.svg</file>
+		<file>images/tc/tc_mark.svg</file>
+        
+        <file>images/vsi/vsi_case.svg</file>
+        <file>images/vsi/vsi_face.svg</file>
+        <file>images/vsi/vsi_hand.svg</file>
+    </qresource>
+</RCC>

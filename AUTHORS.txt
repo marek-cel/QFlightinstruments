@@ -1,0 +1,9 @@
+AUTHORS
+
+Marek M. Cel
+marekcel@marekcel.pl
+Core library, SVG graphics, example program.
+
+Dave Culp
+daveculp@cox.net
+PFD ILD identification and distance indicators.

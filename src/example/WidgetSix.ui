@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WidgetSix</class>
+ <widget class="QWidget" name="WidgetSix">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="WidgetASI" name="widgetASI" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="WidgetADI" name="widgetADI" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="WidgetALT" name="widgetALT" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="WidgetTC" name="widgetTC" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="WidgetHSI" name="widgetHSI" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="WidgetVSI" name="widgetVSI" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>WidgetADI</class>
+   <extends>QWidget</extends>
+   <header>WidgetADI.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WidgetASI</class>
+   <extends>QWidget</extends>
+   <header>WidgetASI.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WidgetHSI</class>
+   <extends>QWidget</extends>
+   <header>WidgetHSI.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WidgetALT</class>
+   <extends>QWidget</extends>
+   <header>WidgetALT.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WidgetTC</class>
+   <extends>QWidget</extends>
+   <header>WidgetTC.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WidgetVSI</class>
+   <extends>QWidget</extends>
+   <header>WidgetVSI.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

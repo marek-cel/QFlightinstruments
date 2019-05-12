@@ -1,0 +1,6 @@
+2018-04-21 10:49 CEST Marek Cel <marekcel@marekcel.pl>
+    * ILS identification and distance added to PFD
+
+2015-11-18 18:00 Marek Cel <marekcel@marekcel.pl>
+    * navigation display widget added
+    * minor changes in primary flight display widget
