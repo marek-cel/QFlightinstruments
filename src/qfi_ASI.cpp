@@ -64,11 +64,11 @@
 qfi_ASI::qfi_ASI( QWidget *parent ) :
     QGraphicsView ( parent ),
 
-    m_scene ( 0 ),
+    m_scene ( nullptr ),
 
-    m_itemFace ( 0 ),
-    m_itemHand ( 0 ),
-    m_itemCase ( 0 ),
+    m_itemFace ( nullptr ),
+    m_itemHand ( nullptr ),
+    m_itemCase ( nullptr ),
 
     m_airspeed ( 0.0f ),
 
@@ -98,11 +98,11 @@ qfi_ASI::qfi_ASI( QWidget *parent ) :
 
 qfi_ASI::~qfi_ASI()
 {
-    if ( m_scene )
+    if ( m_scene != nullptr )
     {
         m_scene->clear();
         delete m_scene;
-        m_scene = 0;
+        m_scene = nullptr;
     }
 
     reset();
@@ -185,9 +185,9 @@ void qfi_ASI::init()
 
 void qfi_ASI::reset()
 {
-    m_itemFace = 0;
-    m_itemHand = 0;
-    m_itemCase = 0;
+    m_itemFace = nullptr;
+    m_itemHand = nullptr;
+    m_itemCase = nullptr;
 
     m_airspeed = 0.0f;
 }

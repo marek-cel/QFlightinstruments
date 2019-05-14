@@ -67,22 +67,22 @@
 qfi_NAV::qfi_NAV( QWidget *parent ) :
     QGraphicsView ( parent ),
 
-    m_scene ( 0 ),
+    m_scene ( nullptr ),
 
-    m_itemBack ( 0 ),
-    m_itemMask ( 0 ),
-    m_itemMark ( 0 ),
+    m_itemBack ( nullptr ),
+    m_itemMask ( nullptr ),
+    m_itemMark ( nullptr ),
 
-    m_itemBrgArrow ( 0 ),
-    m_itemCrsArrow ( 0 ),
-    m_itemDevBar   ( 0 ),
-    m_itemDevScale ( 0 ),
-    m_itemHdgBug   ( 0 ),
-    m_itemHdgScale ( 0 ),
+    m_itemBrgArrow ( nullptr ),
+    m_itemCrsArrow ( nullptr ),
+    m_itemDevBar   ( nullptr ),
+    m_itemDevScale ( nullptr ),
+    m_itemHdgBug   ( nullptr ),
+    m_itemHdgScale ( nullptr ),
 
-    m_itemCrsText ( 0 ),
-    m_itemHdgText ( 0 ),
-    m_itemDmeText ( 0 ),
+    m_itemCrsText ( nullptr ),
+    m_itemHdgText ( nullptr ),
+    m_itemDmeText ( nullptr ),
 
     m_crsTextColor (   0, 255,   0 ),
     m_hdgTextColor ( 255,   0, 255 ),
@@ -178,11 +178,11 @@ qfi_NAV::qfi_NAV( QWidget *parent ) :
 
 qfi_NAV::~qfi_NAV()
 {
-    if ( m_scene )
+    if ( m_scene != nullptr )
     {
         m_scene->clear();
         delete m_scene;
-        m_scene = 0;
+        m_scene = nullptr;
     }
 
     reset();
@@ -348,7 +348,7 @@ void qfi_NAV::init()
     m_itemHdgScale->setTransformOriginPoint( m_originalNavCtr );
     m_scene->addItem( m_itemHdgScale );
 
-    m_itemCrsText = 0;
+    m_itemCrsText = nullptr;
 
     m_itemCrsText = new QGraphicsTextItem( QString( "CRS 999" ) );
     m_itemCrsText->setCacheMode( QGraphicsItem::NoCache );
@@ -387,16 +387,16 @@ void qfi_NAV::init()
 
 void qfi_NAV::reset()
 {
-    m_itemBrgArrow = 0;
-    m_itemCrsArrow = 0;
-    m_itemDevBar   = 0;
-    m_itemDevScale = 0;
-    m_itemHdgBug   = 0;
-    m_itemHdgScale = 0;
+    m_itemBrgArrow = nullptr;
+    m_itemCrsArrow = nullptr;
+    m_itemDevBar   = nullptr;
+    m_itemDevScale = nullptr;
+    m_itemHdgBug   = nullptr;
+    m_itemHdgScale = nullptr;
 
-    m_itemCrsText = 0;
-    m_itemHdgText = 0;
-    m_itemDmeText = 0;
+    m_itemCrsText = nullptr;
+    m_itemHdgText = nullptr;
+    m_itemDmeText = nullptr;
 
     m_heading    = 0.0f;
     m_headingBug = 0.0f;

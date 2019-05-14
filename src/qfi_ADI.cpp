@@ -64,12 +64,12 @@
 qfi_ADI::qfi_ADI( QWidget *parent ) :
     QGraphicsView ( parent ),
 
-    m_scene ( 0 ),
+    m_scene ( nullptr ),
 
-    m_itemBack ( 0 ),
-    m_itemFace ( 0 ),
-    m_itemRing ( 0 ),
-    m_itemCase ( 0 ),
+    m_itemBack ( nullptr ),
+    m_itemFace ( nullptr ),
+    m_itemRing ( nullptr ),
+    m_itemCase ( nullptr ),
 
     m_roll  ( 0.0f ),
     m_pitch ( 0.0f ),
@@ -108,11 +108,11 @@ qfi_ADI::qfi_ADI( QWidget *parent ) :
 
 qfi_ADI::~qfi_ADI()
 {
-    if ( m_scene )
+    if ( m_scene != nullptr )
     {
         m_scene->clear();
         delete m_scene;
-        m_scene = 0;
+        m_scene = nullptr;
     }
 
     reset();
@@ -216,10 +216,10 @@ void qfi_ADI::init()
 
 void qfi_ADI::reset()
 {
-    m_itemBack = 0;
-    m_itemFace = 0;
-    m_itemRing = 0;
-    m_itemCase = 0;
+    m_itemBack = nullptr;
+    m_itemFace = nullptr;
+    m_itemRing = nullptr;
+    m_itemCase = nullptr;
 
     m_roll  = 0.0f;
     m_pitch = 0.0f;
