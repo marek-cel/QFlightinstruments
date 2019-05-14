@@ -100,43 +100,43 @@ void MainWindow::timerEvent( QTimerEvent *event )
 
     double timeStep = m_time.restart();
 
-    m_realTime = m_realTime + timeStep / 1000.0f;
+    m_realTime = m_realTime + timeStep / 1000.0;
 
-    double alpha     =  0.0f;
-    double beta      =  0.0f;
-    double roll      =  0.0f;
-    double pitch     =  0.0f;
-    double heading   =  0.0f;
-    double slipSkid  =  0.0f;
-    double turnRate  =  0.0f;
-    double devH      =  0.0f;
-    double devV      =  0.0f;
-    double airspeed  =  0.0f;
-    double altitude  =  0.0f;
-    double pressure  = 28.0f;
-    double climbRate =  0.0f;
-    double machNo    =  0.0f;
-    double adf       =  0.0f;
-    double dme       =  0.0f;
+    double alpha     =  0.0;
+    double beta      =  0.0;
+    double roll      =  0.0;
+    double pitch     =  0.0;
+    double heading   =  0.0;
+    double slipSkid  =  0.0;
+    double turnRate  =  0.0;
+    double devH      =  0.0;
+    double devV      =  0.0;
+    double airspeed  =  0.0;
+    double altitude  =  0.0;
+    double pressure  = 28.0;
+    double climbRate =  0.0;
+    double machNo    =  0.0;
+    double adf       =  0.0;
+    double dme       =  0.0;
 
     if ( m_ui->pushButtonAuto->isChecked() )
     {
-        alpha     =   20.0f * sin( m_realTime /  10.0f );
-        beta      =   15.0f * sin( m_realTime /  10.0f );
-        roll      =  180.0f * sin( m_realTime /  10.0f );
-        pitch     =   90.0f * sin( m_realTime /  20.0f );
-        heading   =  360.0f * sin( m_realTime /  40.0f );
-        slipSkid  =    1.0f * sin( m_realTime /  10.0f );
-        turnRate  =    7.0f * sin( m_realTime /  10.0f );
-        devH      =    1.0f * sin( m_realTime /  20.0f );
-        devV      =    1.0f * sin( m_realTime /  20.0f );
-        airspeed  =  125.0f * sin( m_realTime /  40.0f ) +  125.0f;
-        altitude  = 9000.0f * sin( m_realTime /  40.0f ) + 9000.0f;
-        pressure  =    2.0f * sin( m_realTime /  20.0f ) +   30.0f;
-        climbRate =  650.0f * sin( m_realTime /  20.0f );
-        machNo    = airspeed / 650.0f;
-        adf       = -360.0f * sin( m_realTime /  50.0f );
-        dme       =   99.0f * sin( m_realTime / 100.0f );
+        alpha     =   20.0 * sin( m_realTime /  10.0 );
+        beta      =   15.0 * sin( m_realTime /  10.0 );
+        roll      =  180.0 * sin( m_realTime /  10.0 );
+        pitch     =   90.0 * sin( m_realTime /  20.0 );
+        heading   =  360.0 * sin( m_realTime /  40.0 );
+        slipSkid  =    1.0 * sin( m_realTime /  10.0 );
+        turnRate  =    7.0 * sin( m_realTime /  10.0 );
+        devH      =    1.0 * sin( m_realTime /  20.0 );
+        devV      =    1.0 * sin( m_realTime /  20.0 );
+        airspeed  =  125.0 * sin( m_realTime /  40.0 ) +  125.0;
+        altitude  = 9000.0 * sin( m_realTime /  40.0 ) + 9000.0;
+        pressure  =    2.0 * sin( m_realTime /  20.0 ) +   30.0;
+        climbRate =  650.0 * sin( m_realTime /  20.0 );
+        machNo    = airspeed / 650.0;
+        adf       = -360.0 * sin( m_realTime /  50.0 );
+        dme       =   99.0 * sin( m_realTime / 100.0 );
 
         m_ui->spinBoxAlpha->setValue( alpha     );
         m_ui->spinBoxBeta->setValue( beta      );
@@ -179,7 +179,7 @@ void MainWindow::timerEvent( QTimerEvent *event )
     m_ui->widgetPFD->setRoll          ( roll     );
     m_ui->widgetPFD->setPitch         ( pitch     );
     m_ui->widgetPFD->setSlipSkid      ( slipSkid  );
-    m_ui->widgetPFD->setTurnRate      ( turnRate / 6.0f );
+    m_ui->widgetPFD->setTurnRate      ( turnRate / 6.0 );
     m_ui->widgetPFD->setDevH          ( devH      );
     m_ui->widgetPFD->setDevV          ( devV      );
     m_ui->widgetPFD->setHeading       ( heading   );
@@ -187,13 +187,13 @@ void MainWindow::timerEvent( QTimerEvent *event )
     m_ui->widgetPFD->setMachNo        ( machNo    );
     m_ui->widgetPFD->setAltitude      ( altitude  );
     m_ui->widgetPFD->setPressure      ( pressure  );
-    m_ui->widgetPFD->setClimbRate     ( climbRate / 100.0f );
+    m_ui->widgetPFD->setClimbRate     ( climbRate / 100.0 );
     m_ui->widgetPFD->setIdentifier    ( "ILAX" , true );
     m_ui->widgetPFD->setDistance      ( dme    , true );
 
     m_ui->widgetNAV->setHeading    ( heading   );
-    m_ui->widgetNAV->setHeadingBug ( 0.0f );
-    m_ui->widgetNAV->setCourse     ( 0.0f );
+    m_ui->widgetNAV->setHeadingBug ( 0.0 );
+    m_ui->widgetNAV->setCourse     ( 0.0 );
     m_ui->widgetNAV->setBearing    ( adf  , true );
     m_ui->widgetNAV->setDeviation  ( devH , true );
     m_ui->widgetNAV->setDistance   ( dme  , true );
@@ -204,7 +204,7 @@ void MainWindow::timerEvent( QTimerEvent *event )
     m_ui->widgetSix->setPressure  ( pressure  );
     m_ui->widgetSix->setAirspeed  ( airspeed  );
     m_ui->widgetSix->setHeading   ( heading   );
-    m_ui->widgetSix->setSlipSkid  ( slipSkid * 15.0f );
+    m_ui->widgetSix->setSlipSkid  ( slipSkid * 15.0 );
     m_ui->widgetSix->setTurnRate  ( turnRate  );
     m_ui->widgetSix->setClimbRate ( climbRate );
 

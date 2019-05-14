@@ -67,23 +67,23 @@ qfi_ADI::qfi_ADI( QWidget *parent ) :
     m_itemRing ( 0 ),
     m_itemCase ( 0 ),
 
-    m_roll  ( 0.0f ),
-    m_pitch ( 0.0f ),
+    m_roll  ( 0.0 ),
+    m_pitch ( 0.0 ),
 
-    m_faceDeltaX_new ( 0.0f ),
-    m_faceDeltaX_old ( 0.0f ),
-    m_faceDeltaY_new ( 0.0f ),
-    m_faceDeltaY_old ( 0.0f ),
+    m_faceDeltaX_new ( 0.0 ),
+    m_faceDeltaX_old ( 0.0 ),
+    m_faceDeltaY_new ( 0.0 ),
+    m_faceDeltaY_old ( 0.0 ),
 
-    m_scaleX ( 1.0f ),
-    m_scaleY ( 1.0f ),
+    m_scaleX ( 1.0 ),
+    m_scaleY ( 1.0 ),
 
     m_originalHeight ( 240 ),
     m_originalWidth  ( 240 ),
 
-    m_originalPixPerDeg ( 1.7f ),
+    m_originalPixPerDeg ( 1.7 ),
 
-    m_originalAdiCtr ( 120.0f , 120.0f ),
+    m_originalAdiCtr ( 120.0 , 120.0 ),
 
     m_backZ ( -30 ),
     m_faceZ ( -20 ),
@@ -142,8 +142,8 @@ void qfi_ADI::setRoll( double roll )
 {
     m_roll = roll;
 
-    if ( m_roll < -180.0f ) m_roll = -180.0f;
-    if ( m_roll >  180.0f ) m_roll =  180.0f;
+    if ( m_roll < -180.0 ) m_roll = -180.0;
+    if ( m_roll >  180.0 ) m_roll =  180.0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -152,8 +152,8 @@ void qfi_ADI::setPitch( double pitch )
 {
     m_pitch = pitch;
 
-    if ( m_pitch < -25.0f ) m_pitch = -25.0f;
-    if ( m_pitch >  25.0f ) m_pitch =  25.0f;
+    if ( m_pitch < -25.0 ) m_pitch = -25.0;
+    if ( m_pitch >  25.0 ) m_pitch =  25.0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -203,7 +203,7 @@ void qfi_ADI::init()
     m_itemCase->setTransform( QTransform::fromScale( m_scaleX, m_scaleY ), true );
     m_scene->addItem( m_itemCase );
 
-    centerOn( width() / 2.0f , height() / 2.0f );
+    centerOn( width() / 2.0 , height() / 2.0 );
 
     updateView();
 }
@@ -217,13 +217,13 @@ void qfi_ADI::reset()
     m_itemRing = 0;
     m_itemCase = 0;
 
-    m_roll  = 0.0f;
-    m_pitch = 0.0f;
+    m_roll  = 0.0;
+    m_pitch = 0.0;
 
-    m_faceDeltaX_new = 0.0f;
-    m_faceDeltaX_old = 0.0f;
-    m_faceDeltaY_new = 0.0f;
-    m_faceDeltaY_old = 0.0f;
+    m_faceDeltaX_new = 0.0;
+    m_faceDeltaX_old = 0.0;
+    m_faceDeltaY_new = 0.0;
+    m_faceDeltaY_old = 0.0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////

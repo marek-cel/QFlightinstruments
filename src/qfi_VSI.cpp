@@ -66,15 +66,15 @@ qfi_VSI::qfi_VSI( QWidget *parent ) :
     m_itemHand ( 0 ),
     m_itemCase ( 0 ),
 
-    m_climbRate ( 0.0f ),
+    m_climbRate ( 0.0 ),
 
-    m_scaleX ( 1.0f ),
-    m_scaleY ( 1.0f ),
+    m_scaleX ( 1.0 ),
+    m_scaleY ( 1.0 ),
 
     m_originalHeight ( 240 ),
     m_originalWidth  ( 240 ),
 
-    m_originalVsiCtr ( 120.0f , 120.0f ),
+    m_originalVsiCtr ( 120.0 , 120.0 ),
 
     m_faceZ ( -20 ),
     m_handZ ( -10 ),
@@ -129,8 +129,8 @@ void qfi_VSI::setClimbRate( double climbRate )
 {
     m_climbRate = climbRate;
 
-    if ( m_climbRate < -2000.0f ) m_climbRate = -2000.0f;
-    if ( m_climbRate >  2000.0f ) m_climbRate =  2000.0f;
+    if ( m_climbRate < -2000.0 ) m_climbRate = -2000.0;
+    if ( m_climbRate >  2000.0 ) m_climbRate =  2000.0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -172,7 +172,7 @@ void qfi_VSI::init()
     m_itemCase->setTransform( QTransform::fromScale( m_scaleX, m_scaleY ), true );
     m_scene->addItem( m_itemCase );
 
-    centerOn( width() / 2.0f , height() / 2.0f );
+    centerOn( width() / 2.0 , height() / 2.0 );
 
     updateView();
 }
@@ -185,14 +185,14 @@ void qfi_VSI::reset()
     m_itemHand = 0;
     m_itemCase = 0;
 
-    m_climbRate = 0.0f;
+    m_climbRate = 0.0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 
 void qfi_VSI::updateView()
 {
-    m_itemHand->setRotation( m_climbRate * 0.086f );
+    m_itemHand->setRotation( m_climbRate * 0.086 );
 
     m_scene->update();
 }

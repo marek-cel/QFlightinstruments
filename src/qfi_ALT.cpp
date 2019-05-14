@@ -69,16 +69,16 @@ qfi_ALT::qfi_ALT( QWidget *parent ) :
     m_itemHand_2 ( 0 ),
     m_itemCase   ( 0 ),
 
-    m_altitude (  0.0f ),
-    m_pressure ( 28.0f ),
+    m_altitude (  0.0 ),
+    m_pressure ( 28.0 ),
 
-    m_scaleX ( 1.0f ),
-    m_scaleY ( 1.0f ),
+    m_scaleX ( 1.0 ),
+    m_scaleY ( 1.0 ),
 
     m_originalHeight ( 240 ),
     m_originalWidth  ( 240 ),
 
-    m_originalAltCtr ( 120.0f , 120.0f ),
+    m_originalAltCtr ( 120.0 , 120.0 ),
 
     m_face1Z ( -50 ),
     m_face2Z ( -40 ),
@@ -143,8 +143,8 @@ void qfi_ALT::setPressure( double pressure )
 {
     m_pressure = pressure;
 
-    if ( m_pressure < 28.0f ) m_pressure = 28.0f;
-    if ( m_pressure > 31.5f ) m_pressure = 31.5f;
+    if ( m_pressure < 28.0 ) m_pressure = 28.0;
+    if ( m_pressure > 31.5 ) m_pressure = 31.5;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -207,7 +207,7 @@ void qfi_ALT::init()
     m_itemCase->setTransform( QTransform::fromScale( m_scaleX, m_scaleY ), true );
     m_scene->addItem( m_itemCase );
 
-    centerOn( width() / 2.0f , height() / 2.0f );
+    centerOn( width() / 2.0 , height() / 2.0 );
 
     updateView();
 }
@@ -223,8 +223,8 @@ void qfi_ALT::reset()
     m_itemHand_2 = 0;
     m_itemCase   = 0;
 
-    m_altitude =  0.0f;
-    m_pressure = 28.0f;
+    m_altitude =  0.0;
+    m_pressure = 28.0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -233,10 +233,10 @@ void qfi_ALT::updateView()
 {
     int altitude = ceil( m_altitude + 0.5 );
 
-    double angleH1 = m_altitude * 0.036f;
-    double angleH2 = ( altitude % 1000 ) * 0.36f;
-    double angleF1 = ( m_pressure - 28.0f ) * 100.0f;
-    double angleF3 = m_altitude * 0.0036f;
+    double angleH1 = m_altitude * 0.036;
+    double angleH2 = ( altitude % 1000 ) * 0.36;
+    double angleF1 = ( m_pressure - 28.0 ) * 100.0;
+    double angleF3 = m_altitude * 0.0036;
 
     m_itemHand_1->setRotation(   angleH1 );
     m_itemHand_2->setRotation(   angleH2 );

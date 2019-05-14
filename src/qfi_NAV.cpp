@@ -84,32 +84,32 @@ qfi_NAV::qfi_NAV( QWidget *parent ) :
     m_hdgTextColor ( 255,   0, 255 ),
     m_dmeTextColor ( 255, 255, 255 ),
 
-    m_heading    ( 0.0f ),
-    m_headingBug ( 0.0f ),
-    m_course     ( 0.0f ),
-    m_bearing    ( 0.0f ),
-    m_deviation  ( 0.0f ),
-    m_distance   ( 0.0f ),
+    m_heading    ( 0.0 ),
+    m_headingBug ( 0.0 ),
+    m_course     ( 0.0 ),
+    m_bearing    ( 0.0 ),
+    m_deviation  ( 0.0 ),
+    m_distance   ( 0.0 ),
 
     m_bearingVisible   ( true ),
     m_deviationVisible ( true ),
     m_distanceVisible  ( true ),
 
-    m_devBarDeltaX_new ( 0.0f ),
-    m_devBarDeltaX_old ( 0.0f ),
-    m_devBarDeltaY_new ( 0.0f ),
-    m_devBarDeltaY_old ( 0.0f ),
+    m_devBarDeltaX_new ( 0.0 ),
+    m_devBarDeltaX_old ( 0.0 ),
+    m_devBarDeltaY_new ( 0.0 ),
+    m_devBarDeltaY_old ( 0.0 ),
 
-    m_scaleX ( 1.0f ),
-    m_scaleY ( 1.0f ),
+    m_scaleX ( 1.0 ),
+    m_scaleY ( 1.0 ),
 
-    m_originalPixPerDev ( 52.5f ),
+    m_originalPixPerDev ( 52.5 ),
 
-    m_originalNavCtr ( 150.0f, 150.0f ),
+    m_originalNavCtr ( 150.0, 150.0 ),
 
-    m_originalCrsTextCtr (  50.0f,  25.0f ),
-    m_originalHdgTextCtr ( 250.0f,  25.0f ),
-    m_originalDmeTextCtr ( 250.0f, 275.0f ),
+    m_originalCrsTextCtr (  50.0,  25.0 ),
+    m_originalHdgTextCtr ( 250.0,  25.0 ),
+    m_originalDmeTextCtr ( 250.0, 275.0 ),
 
     m_originalHeight ( 300 ),
     m_originalWidth  ( 300 ),
@@ -130,32 +130,32 @@ qfi_NAV::qfi_NAV( QWidget *parent ) :
 {
 #   ifdef WIN32
     m_crsTextFont.setFamily( "Courier" );
-    m_crsTextFont.setPointSizeF( 12.0f );
+    m_crsTextFont.setPointSizeF( 12.0 );
     m_crsTextFont.setStretch( QFont::Condensed );
     m_crsTextFont.setWeight( QFont::Bold );
 
     m_hdgTextFont.setFamily( "Courier" );
-    m_hdgTextFont.setPointSizeF( 12.0f );
+    m_hdgTextFont.setPointSizeF( 12.0 );
     m_hdgTextFont.setStretch( QFont::Condensed );
     m_hdgTextFont.setWeight( QFont::Bold );
 
     m_dmeTextFont.setFamily( "Courier" );
-    m_dmeTextFont.setPointSizeF( 10.0f );
+    m_dmeTextFont.setPointSizeF( 10.0 );
     m_dmeTextFont.setStretch( QFont::Condensed );
     m_dmeTextFont.setWeight( QFont::Bold );
 #   else
     m_crsTextFont.setFamily( "courier" );
-    m_crsTextFont.setPointSizeF( 12.0f );
+    m_crsTextFont.setPointSizeF( 12.0 );
     m_crsTextFont.setStretch( QFont::Condensed );
     m_crsTextFont.setWeight( QFont::Bold );
 
     m_hdgTextFont.setFamily( "courier" );
-    m_hdgTextFont.setPointSizeF( 12.0f );
+    m_hdgTextFont.setPointSizeF( 12.0 );
     m_hdgTextFont.setStretch( QFont::Condensed );
     m_hdgTextFont.setWeight( QFont::Bold );
 
     m_dmeTextFont.setFamily( "courier" );
-    m_dmeTextFont.setPointSizeF( 10.0f );
+    m_dmeTextFont.setPointSizeF( 10.0 );
     m_dmeTextFont.setStretch( QFont::Condensed );
     m_dmeTextFont.setWeight( QFont::Bold );
 #   endif
@@ -212,8 +212,8 @@ void qfi_NAV::setHeading( double heading )
 {
     m_heading = heading;
 
-    while ( m_heading <   0.0f ) m_heading += 360.0f;
-    while ( m_heading > 360.0f ) m_heading -= 360.0f;
+    while ( m_heading <   0.0 ) m_heading += 360.0;
+    while ( m_heading > 360.0 ) m_heading -= 360.0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -222,8 +222,8 @@ void qfi_NAV::setHeadingBug( double headingBug )
 {
     m_headingBug = headingBug;
 
-    while ( m_headingBug <   0.0f ) m_headingBug += 360.0f;
-    while ( m_headingBug > 360.0f ) m_headingBug -= 360.0f;
+    while ( m_headingBug <   0.0 ) m_headingBug += 360.0;
+    while ( m_headingBug > 360.0 ) m_headingBug -= 360.0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -232,8 +232,8 @@ void qfi_NAV::setCourse( double course )
 {
     m_course = course;
 
-    while ( m_course <   0.0f ) m_course += 360.0f;
-    while ( m_course > 360.0f ) m_course -= 360.0f;
+    while ( m_course <   0.0 ) m_course += 360.0;
+    while ( m_course > 360.0 ) m_course -= 360.0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -243,8 +243,8 @@ void qfi_NAV::setBearing( double bearing, bool visible )
     m_bearing        = bearing;
     m_bearingVisible = visible;
 
-    while ( m_bearing <   0.0f ) m_bearing += 360.0f;
-    while ( m_bearing > 360.0f ) m_bearing -= 360.0f;
+    while ( m_bearing <   0.0 ) m_bearing += 360.0;
+    while ( m_bearing > 360.0 ) m_bearing -= 360.0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -254,8 +254,8 @@ void qfi_NAV::setDeviation( double deviation, bool visible )
     m_deviation        = deviation;
     m_deviationVisible = visible;
 
-    if ( m_deviation < -1.0f ) m_deviation = -1.0f;
-    if ( m_deviation >  1.0f ) m_deviation =  1.0f;
+    if ( m_deviation < -1.0 ) m_deviation = -1.0;
+    if ( m_deviation >  1.0 ) m_deviation =  1.0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -352,8 +352,8 @@ void qfi_NAV::init()
     m_itemCrsText->setDefaultTextColor( m_crsTextColor );
     m_itemCrsText->setFont( m_crsTextFont );
     m_itemCrsText->setTransform( QTransform::fromScale( m_scaleX, m_scaleY ), true );
-    m_itemCrsText->moveBy( m_scaleX * ( m_originalCrsTextCtr.x() - m_itemCrsText->boundingRect().width()  / 2.0f ),
-                           m_scaleY * ( m_originalCrsTextCtr.y() - m_itemCrsText->boundingRect().height() / 2.0f ) );
+    m_itemCrsText->moveBy( m_scaleX * ( m_originalCrsTextCtr.x() - m_itemCrsText->boundingRect().width()  / 2.0 ),
+                           m_scaleY * ( m_originalCrsTextCtr.y() - m_itemCrsText->boundingRect().height() / 2.0 ) );
     m_scene->addItem( m_itemCrsText );
 
     m_itemHdgText = new QGraphicsTextItem( QString( "HDG 999" ) );
@@ -362,8 +362,8 @@ void qfi_NAV::init()
     m_itemHdgText->setDefaultTextColor( m_hdgTextColor );
     m_itemHdgText->setFont( m_hdgTextFont );
     m_itemHdgText->setTransform( QTransform::fromScale( m_scaleX, m_scaleY ), true );
-    m_itemHdgText->moveBy( m_scaleX * ( m_originalHdgTextCtr.x() - m_itemHdgText->boundingRect().width()  / 2.0f ),
-                           m_scaleY * ( m_originalHdgTextCtr.y() - m_itemHdgText->boundingRect().height() / 2.0f ) );
+    m_itemHdgText->moveBy( m_scaleX * ( m_originalHdgTextCtr.x() - m_itemHdgText->boundingRect().width()  / 2.0 ),
+                           m_scaleY * ( m_originalHdgTextCtr.y() - m_itemHdgText->boundingRect().height() / 2.0 ) );
     m_scene->addItem( m_itemHdgText );
 
     m_itemDmeText = new QGraphicsTextItem( QString( "99.9 NM" ) );
@@ -372,8 +372,8 @@ void qfi_NAV::init()
     m_itemDmeText->setDefaultTextColor( m_dmeTextColor );
     m_itemDmeText->setFont( m_dmeTextFont );
     m_itemDmeText->setTransform( QTransform::fromScale( m_scaleX, m_scaleY ), true );
-    m_itemDmeText->moveBy( m_scaleX * ( m_originalDmeTextCtr.x() - m_itemDmeText->boundingRect().width()  / 2.0f ),
-                           m_scaleY * ( m_originalDmeTextCtr.y() - m_itemDmeText->boundingRect().height() / 2.0f ) );
+    m_itemDmeText->moveBy( m_scaleX * ( m_originalDmeTextCtr.x() - m_itemDmeText->boundingRect().width()  / 2.0 ),
+                           m_scaleY * ( m_originalDmeTextCtr.y() - m_itemDmeText->boundingRect().height() / 2.0 ) );
     m_scene->addItem( m_itemDmeText );
 
     updateView();
@@ -394,21 +394,21 @@ void qfi_NAV::reset()
     m_itemHdgText = 0;
     m_itemDmeText = 0;
 
-    m_heading    = 0.0f;
-    m_headingBug = 0.0f;
-    m_course     = 0.0f;
-    m_bearing    = 0.0f;
-    m_deviation  = 0.0f;
-    m_distance   = 0.0f;
+    m_heading    = 0.0;
+    m_headingBug = 0.0;
+    m_course     = 0.0;
+    m_bearing    = 0.0;
+    m_deviation  = 0.0;
+    m_distance   = 0.0;
 
     m_bearingVisible   = true;
     m_deviationVisible = true;
     m_distanceVisible  = true;
 
-    m_devBarDeltaX_new = 0.0f;
-    m_devBarDeltaX_old = 0.0f;
-    m_devBarDeltaY_new = 0.0f;
-    m_devBarDeltaY_old = 0.0f;
+    m_devBarDeltaX_new = 0.0;
+    m_devBarDeltaX_old = 0.0;
+    m_devBarDeltaY_new = 0.0;
+    m_devBarDeltaY_old = 0.0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -439,9 +439,9 @@ void qfi_NAV::updateView()
 
         double angle_deg = -m_heading + m_course;
 #       ifndef M_PI
-        double angle_rad = 3.14159265358979323846 * angle_deg / 180.0f;
+        double angle_rad = 3.14159265358979323846 * angle_deg / 180.0;
 #       else
-        double angle_rad = M_PI * angle_deg / 180.0f;
+        double angle_rad = M_PI * angle_deg / 180.0;
 #       endif
 
 
@@ -482,5 +482,5 @@ void qfi_NAV::updateView()
 
     m_scene->update();
 
-    centerOn( width() / 2.0f , height() / 2.0f );
+    centerOn( width() / 2.0 , height() / 2.0 );
 }

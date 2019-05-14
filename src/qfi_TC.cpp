@@ -69,17 +69,17 @@ qfi_TC::qfi_TC( QWidget *parent ) :
     m_itemMark   ( 0 ),
     m_itemCase   ( 0 ),
 
-    m_turnRate ( 0.0f ),
-    m_slipSkid ( 0.0f ),
+    m_turnRate ( 0.0 ),
+    m_slipSkid ( 0.0 ),
 
-    m_scaleX ( 1.0f ),
-    m_scaleY ( 1.0f ),
+    m_scaleX ( 1.0 ),
+    m_scaleY ( 1.0 ),
 
     m_originalHeight ( 240 ),
     m_originalWidth  ( 240 ),
 
-    m_originalMarkCtr ( 120.0f , 120.0f ),
-    m_originalBallCtr ( 120.0f , -36.0f ),
+    m_originalMarkCtr ( 120.0 , 120.0 ),
+    m_originalBallCtr ( 120.0 , -36.0 ),
 
     m_backZ  ( -70 ),
     m_ballZ  ( -60 ),
@@ -137,8 +137,8 @@ void qfi_TC::setTurnRate( double turnRate )
 {
     m_turnRate = turnRate;
 
-    if ( m_turnRate < -6.0f ) m_turnRate = -6.0f;
-    if ( m_turnRate >  6.0f ) m_turnRate =  6.0f;
+    if ( m_turnRate < -6.0 ) m_turnRate = -6.0;
+    if ( m_turnRate >  6.0 ) m_turnRate =  6.0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -147,8 +147,8 @@ void qfi_TC::setSlipSkid( double slipSkid )
 {
     m_slipSkid = slipSkid;
 
-    if ( m_slipSkid < -15.0f ) m_slipSkid = -15.0f;
-    if ( m_slipSkid >  15.0f ) m_slipSkid =  15.0f;
+    if ( m_slipSkid < -15.0 ) m_slipSkid = -15.0;
+    if ( m_slipSkid >  15.0 ) m_slipSkid =  15.0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -209,7 +209,7 @@ void qfi_TC::init()
     m_itemCase->setTransform( QTransform::fromScale( m_scaleX, m_scaleY ), true );
     m_scene->addItem( m_itemCase );
 
-    centerOn( width() / 2.0f , height() / 2.0f );
+    centerOn( width() / 2.0 , height() / 2.0 );
 
     updateView();
 }
@@ -220,8 +220,8 @@ void qfi_TC::reset()
 {
     m_itemCase = 0;
 
-    m_turnRate = 0.0f;
-    m_slipSkid = 0.0f;
+    m_turnRate = 0.0;
+    m_slipSkid = 0.0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -233,7 +233,7 @@ void qfi_TC::updateView()
 
     m_itemBall->setRotation( -m_slipSkid );
 
-    double angle = ( m_turnRate / 3.0f ) * 20.0f;
+    double angle = ( m_turnRate / 3.0 ) * 20.0;
 
     m_itemMark->setRotation( angle );
 

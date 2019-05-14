@@ -65,15 +65,15 @@ qfi_HSI::qfi_HSI( QWidget *parent ) :
     m_itemFace ( 0 ),
     m_itemCase ( 0 ),
 
-    m_heading ( 0.0f ),
+    m_heading ( 0.0 ),
 
-    m_scaleX ( 1.0f ),
-    m_scaleY ( 1.0f ),
+    m_scaleX ( 1.0 ),
+    m_scaleY ( 1.0 ),
 
     m_originalHeight ( 240 ),
     m_originalWidth  ( 240 ),
 
-    m_originalHsiCtr ( 120.0f , 120.0f ),
+    m_originalHsiCtr ( 120.0 , 120.0 ),
 
     m_faceZ ( -20 ),
     m_caseZ (  10 )
@@ -161,7 +161,7 @@ void qfi_HSI::init()
     m_itemCase->setTransform( QTransform::fromScale( m_scaleX, m_scaleY ), true );
     m_scene->addItem( m_itemCase );
 
-    centerOn( width() / 2.0f , height() / 2.0f );
+    centerOn( width() / 2.0 , height() / 2.0 );
 
     updateView();
 }
@@ -173,7 +173,7 @@ void qfi_HSI::reset()
     m_itemFace = 0;
     m_itemCase = 0;
 
-    m_heading = 0.0f;
+    m_heading = 0.0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
