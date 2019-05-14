@@ -83,7 +83,7 @@ MainWindow::MainWindow( QWidget *parent ) :
 
 MainWindow::~MainWindow()
 {
-    cout << "Average time step: " << ( (double)m_realTime ) / ( (double)m_steps ) << " s" << endl;
+    cout << "Average time step: " << ( static_cast<double>(m_realTime) ) / ( static_cast<double>(m_steps) ) << " s" << endl;
 
     if ( m_timerId ) killTimer( m_timerId );
 
@@ -138,41 +138,41 @@ void MainWindow::timerEvent( QTimerEvent *event )
         adf       = -360.0f * sin( m_realTime /  50.0f );
         dme       =   99.0f * sin( m_realTime / 100.0f );
 
-        m_ui->spinBoxAlpha ->setValue( alpha     );
-        m_ui->spinBoxBeta  ->setValue( beta      );
-        m_ui->spinBoxRoll  ->setValue( roll      );
-        m_ui->spinBoxPitch ->setValue( pitch     );
-        m_ui->spinBoxSlip  ->setValue( slipSkid  );
-        m_ui->spinBoxTurn  ->setValue( turnRate  );
-        m_ui->spinBoxDevH  ->setValue( devH      );
-        m_ui->spinBoxDevV  ->setValue( devV      );
-        m_ui->spinBoxHead  ->setValue( heading   );
-        m_ui->spinBoxSpeed ->setValue( airspeed  );
-        m_ui->spinBoxMach  ->setValue( machNo    );
-        m_ui->spinBoxAlt   ->setValue( altitude  );
-        m_ui->spinBoxPress ->setValue( pressure  );
-        m_ui->spinBoxClimb ->setValue( climbRate );
-        m_ui->spinBoxADF   ->setValue( adf       );
-        m_ui->spinBoxDME   ->setValue( dme       );
+        m_ui->spinBoxAlpha->setValue( alpha     );
+        m_ui->spinBoxBeta->setValue( beta      );
+        m_ui->spinBoxRoll->setValue( roll      );
+        m_ui->spinBoxPitch->setValue( pitch     );
+        m_ui->spinBoxSlip->setValue( slipSkid  );
+        m_ui->spinBoxTurn->setValue( turnRate  );
+        m_ui->spinBoxDevH->setValue( devH      );
+        m_ui->spinBoxDevV->setValue( devV      );
+        m_ui->spinBoxHead->setValue( heading   );
+        m_ui->spinBoxSpeed->setValue( airspeed  );
+        m_ui->spinBoxMach->setValue( machNo    );
+        m_ui->spinBoxAlt->setValue( altitude  );
+        m_ui->spinBoxPress->setValue( pressure  );
+        m_ui->spinBoxClimb->setValue( climbRate );
+        m_ui->spinBoxADF->setValue( adf       );
+        m_ui->spinBoxDME->setValue( dme       );
     }
     else
     {
-        alpha     = (double)m_ui->spinBoxAlpha ->value();
-        beta      = (double)m_ui->spinBoxBeta  ->value();
-        roll      = (double)m_ui->spinBoxRoll  ->value();
-        pitch     = (double)m_ui->spinBoxPitch ->value();
-        heading   = (double)m_ui->spinBoxHead  ->value();
-        slipSkid  = (double)m_ui->spinBoxSlip  ->value();
-        turnRate  = (double)m_ui->spinBoxTurn  ->value();
-        devH      = (double)m_ui->spinBoxDevH  ->value();
-        devV      = (double)m_ui->spinBoxDevV  ->value();
-        airspeed  = (double)m_ui->spinBoxSpeed ->value();
-        pressure  = (double)m_ui->spinBoxPress ->value();
-        altitude  = (double)m_ui->spinBoxAlt   ->value();
-        climbRate = (double)m_ui->spinBoxClimb ->value();
-        machNo    = (double)m_ui->spinBoxMach  ->value();
-        adf       = (double)m_ui->spinBoxADF   ->value();
-        dme       = (double)m_ui->spinBoxDME   ->value();
+        alpha     = static_cast<double>(m_ui->spinBoxAlpha->value());
+        beta      = static_cast<double>(m_ui->spinBoxBeta->value());
+        roll      = static_cast<double>(m_ui->spinBoxRoll->value());
+        pitch     = static_cast<double>(m_ui->spinBoxPitch->value());
+        heading   = static_cast<double>(m_ui->spinBoxHead->value());
+        slipSkid  = static_cast<double>(m_ui->spinBoxSlip->value());
+        turnRate  = static_cast<double>(m_ui->spinBoxTurn->value());
+        devH      = static_cast<double>(m_ui->spinBoxDevH->value());
+        devV      = static_cast<double>(m_ui->spinBoxDevV->value());
+        airspeed  = static_cast<double>(m_ui->spinBoxSpeed->value());
+        pressure  = static_cast<double>(m_ui->spinBoxPress->value());
+        altitude  = static_cast<double>(m_ui->spinBoxAlt->value());
+        climbRate = static_cast<double>(m_ui->spinBoxClimb->value());
+        machNo    = static_cast<double>(m_ui->spinBoxMach->value());
+        adf       = static_cast<double>(m_ui->spinBoxADF->value());
+        dme       = static_cast<double>(m_ui->spinBoxDME->value());
     }
 
     m_ui->widgetPFD->setFlightPathMarker ( alpha, beta );

@@ -161,8 +161,8 @@ void qfi_PFD::resizeEvent( QResizeEvent * pEvent )
 
 void qfi_PFD::init()
 {
-    m_scaleX = (double)width()  / (double)m_originalWidth;
-    m_scaleY = (double)height() / (double)m_originalHeight;
+    m_scaleX = static_cast<double>(width())  / static_cast<double>(m_originalWidth);
+    m_scaleY = static_cast<double>(height()) / static_cast<double>(m_originalHeight);
 
     m_adi->init( m_scaleX, m_scaleY );
     m_alt->init( m_scaleX, m_scaleY );
@@ -200,8 +200,8 @@ void qfi_PFD::reset()
 
 void qfi_PFD::updateView()
 {
-    m_scaleX = (double)width()  / (double)m_originalWidth;
-    m_scaleY = (double)height() / (double)m_originalHeight;
+    m_scaleX = static_cast<double>(width())  / static_cast<double>(m_originalWidth);
+    m_scaleY = static_cast<double>(height()) / static_cast<double>(m_originalHeight);
 
     m_adi->update( m_scaleX, m_scaleY );
     m_alt->update( m_scaleX, m_scaleY );
@@ -1169,9 +1169,9 @@ void qfi_PFD::ALT::updateScaleLabels()
     int tmp = floor( m_altitude + 0.5f );
     int alt = tmp - ( tmp % 500 );
 
-    double alt1 = (double)alt + 500.0f;
-    double alt2 = (double)alt;
-    double alt3 = (double)alt - 500.0f;
+    double alt1 = static_cast<double>(alt) + 500.0f;
+    double alt2 = static_cast<double>(alt);
+    double alt3 = static_cast<double>(alt) - 500.0f;
 
     m_labelsDeltaY_new = m_scaleY * m_originalPixPerAlt * m_altitude;
 
@@ -1563,13 +1563,13 @@ void qfi_PFD::ASI::updateScaleLabels()
     int tmp = floor( m_airspeed + 0.5f );
     int spd = tmp - ( tmp % 20 );
 
-    double spd1 = (double)spd + 60.0f;
-    double spd2 = (double)spd + 40.0f;
-    double spd3 = (double)spd + 20.0f;
-    double spd4 = (double)spd;
-    double spd5 = (double)spd - 20.0f;
-    double spd6 = (double)spd - 40.0f;
-    double spd7 = (double)spd - 60.0f;
+    double spd1 = static_cast<double>(spd) + 60.0f;
+    double spd2 = static_cast<double>(spd) + 40.0f;
+    double spd3 = static_cast<double>(spd) + 20.0f;
+    double spd4 = static_cast<double>(spd);
+    double spd5 = static_cast<double>(spd) - 20.0f;
+    double spd6 = static_cast<double>(spd) - 40.0f;
+    double spd7 = static_cast<double>(spd) - 60.0f;
 
     while ( m_labelsDeltaY_new > m_scaleY * 15.0f )
     {

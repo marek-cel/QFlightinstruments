@@ -148,8 +148,8 @@ void qfi_VSI::resizeEvent( QResizeEvent *event )
 
 void qfi_VSI::init()
 {
-    m_scaleX = (double)width()  / (double)m_originalWidth;
-    m_scaleY = (double)height() / (double)m_originalHeight;
+    m_scaleX = static_cast<double>(width())  / static_cast<double>(m_originalWidth);
+    m_scaleY = static_cast<double>(height()) / static_cast<double>(m_originalHeight);
 
     reset();
 

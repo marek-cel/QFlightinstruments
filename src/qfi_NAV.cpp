@@ -281,8 +281,8 @@ void qfi_NAV::resizeEvent( QResizeEvent *event )
 
 void qfi_NAV::init()
 {
-    m_scaleX = (double)width()  / (double)m_originalWidth;
-    m_scaleY = (double)height() / (double)m_originalHeight;
+    m_scaleX = static_cast<double>(width())  / static_cast<double>(m_originalWidth);
+    m_scaleY = static_cast<double>(height()) / static_cast<double>(m_originalHeight);
 
     m_itemBack = new QGraphicsSvgItem( ":/qfi/images/nav/nav_back.svg" );
     m_itemBack->setCacheMode( QGraphicsItem::NoCache );
@@ -415,8 +415,8 @@ void qfi_NAV::reset()
 
 void qfi_NAV::updateView()
 {
-    m_scaleX = (double)width()  / (double)m_originalWidth;
-    m_scaleY = (double)height() / (double)m_originalHeight;
+    m_scaleX = static_cast<double>(width())  / static_cast<double>(m_originalWidth);
+    m_scaleY = static_cast<double>(height()) / static_cast<double>(m_originalHeight);
 
     m_itemCrsArrow->setRotation( -m_heading + m_course );
     m_itemHdgBug->setRotation( -m_heading + m_headingBug );
