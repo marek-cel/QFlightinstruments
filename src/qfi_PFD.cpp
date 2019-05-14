@@ -220,8 +220,8 @@ void qfi_PFD::init()
 
 void qfi_PFD::reset()
 {
-    m_itemBack = 0;
-    m_itemMask = 0;
+    m_itemBack = nullptr;
+    m_itemMask = nullptr;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
