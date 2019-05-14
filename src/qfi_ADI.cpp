@@ -51,10 +51,6 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifdef WIN32
-#   include <float.h>
-#endif
-
 #include <math.h>
 
 #include "qfi_ADI.h"
@@ -142,7 +138,7 @@ void qfi_ADI::update()
 
 ////////////////////////////////////////////////////////////////////////////////
 
-void qfi_ADI::setRoll( float roll )
+void qfi_ADI::setRoll( double roll )
 {
     m_roll = roll;
 
@@ -152,7 +148,7 @@ void qfi_ADI::setRoll( float roll )
 
 ////////////////////////////////////////////////////////////////////////////////
 
-void qfi_ADI::setPitch( float pitch )
+void qfi_ADI::setPitch( double pitch )
 {
     m_pitch = pitch;
 
@@ -175,8 +171,8 @@ void qfi_ADI::resizeEvent( QResizeEvent *event )
 
 void qfi_ADI::init()
 {
-    m_scaleX = (float)width()  / (float)m_originalWidth;
-    m_scaleY = (float)height() / (float)m_originalHeight;
+    m_scaleX = (double)width()  / (double)m_originalWidth;
+    m_scaleY = (double)height() / (double)m_originalHeight;
 
     reset();
 
@@ -234,16 +230,16 @@ void qfi_ADI::reset()
 
 void qfi_ADI::updateView()
 {
-    m_scaleX = (float)width()  / (float)m_originalWidth;
-    m_scaleY = (float)height() / (float)m_originalHeight;
+    m_scaleX = (double)width()  / (double)m_originalWidth;
+    m_scaleY = (double)height() / (double)m_originalHeight;
 
     m_itemBack->setRotation( - m_roll );
     m_itemFace->setRotation( - m_roll );
     m_itemRing->setRotation( - m_roll );
 
-    float roll_rad = M_PI * m_roll / 180.0;
+    double roll_rad = M_PI * m_roll / 180.0;
 
-    float delta  = m_originalPixPerDeg * m_pitch;
+    double delta  = m_originalPixPerDeg * m_pitch;
 
     m_faceDeltaX_new = m_scaleX * delta * sin( roll_rad );
     m_faceDeltaY_new = m_scaleY * delta * cos( roll_rad );

@@ -80,7 +80,7 @@ public:
         m_hsi->update();
     }
 
-    inline void setHeading( float heading )
+    inline void setHeading( double heading )
     {
         m_hsi->setHeading( heading );
     }

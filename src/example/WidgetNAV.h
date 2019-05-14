@@ -80,32 +80,32 @@ public:
         m_nav->update();
     }
 
-    inline void setHeading( float heading )
+    inline void setHeading( double heading )
     {
         m_nav->setHeading( heading );
     }
 
-    inline void setHeadingBug( float headingBug )
+    inline void setHeadingBug( double headingBug )
     {
         m_nav->setHeadingBug( headingBug );
     }
 
-    inline void setCourse( float course )
+    inline void setCourse( double course )
     {
         m_nav->setCourse( course );
     }
 
-    inline void setBearing( float bearing, bool visible = false )
+    inline void setBearing( double bearing, bool visible = false )
     {
         m_nav->setBearing( bearing, visible );
     }
 
-    inline void setDeviation( float deviation, bool visible = false )
+    inline void setDeviation( double deviation, bool visible = false )
     {
         m_nav->setDeviation( deviation, visible );
     }
 
-    inline void setDistance( float distance, bool visible = false )
+    inline void setDistance( double distance, bool visible = false )
     {
         m_nav->setDistance( distance, visible );
     }

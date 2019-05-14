@@ -75,10 +75,10 @@ public:
     void update();
 
     /** @param roll angle [deg] */
-    void setRoll( float roll );
+    void setRoll( double roll );
 
     /** @param pitch angle [deg] */
-    void setPitch( float pitch );
+    void setPitch( double pitch );
 
 protected:
 
@@ -93,21 +93,21 @@ private:
     QGraphicsSvgItem *m_itemRing;
     QGraphicsSvgItem *m_itemCase;
 
-    float m_roll;
-    float m_pitch;
+    double m_roll;
+    double m_pitch;
 
-    float m_faceDeltaX_new;
-    float m_faceDeltaX_old;
-    float m_faceDeltaY_new;
-    float m_faceDeltaY_old;
+    double m_faceDeltaX_new;
+    double m_faceDeltaX_old;
+    double m_faceDeltaY_new;
+    double m_faceDeltaY_old;
 
-    float m_scaleX;
-    float m_scaleY;
+    double m_scaleX;
+    double m_scaleY;
 
     const int m_originalHeight;
     const int m_originalWidth;
 
-    const float m_originalPixPerDeg;
+    const double m_originalPixPerDeg;
 
     QPointF m_originalAdiCtr;
 

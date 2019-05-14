@@ -80,7 +80,7 @@ public:
         m_vsi->update();
     }
 
-    inline void setClimbRate( float climbRate )
+    inline void setClimbRate( double climbRate )
     {
         m_vsi->setClimbRate( climbRate );
     }

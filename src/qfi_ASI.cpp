@@ -51,10 +51,6 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifdef WIN32
-#   include <float.h>
-#endif
-
 #include <math.h>
 
 #include "qfi_ASI.h"
@@ -129,7 +125,7 @@ void qfi_ASI::update()
 
 ////////////////////////////////////////////////////////////////////////////////
 
-void qfi_ASI::setAirspeed( float airspeed )
+void qfi_ASI::setAirspeed( double airspeed )
 {
     m_airspeed = airspeed;
 
@@ -152,8 +148,8 @@ void qfi_ASI::resizeEvent( QResizeEvent *event )
 
 void qfi_ASI::init()
 {
-    m_scaleX = (float)width()  / (float)m_originalWidth;
-    m_scaleY = (float)height() / (float)m_originalHeight;
+    m_scaleX = (double)width()  / (double)m_originalWidth;
+    m_scaleY = (double)height() / (double)m_originalHeight;
 
     reset();
 
@@ -196,7 +192,7 @@ void qfi_ASI::reset()
 
 void qfi_ASI::updateView()
 {
-    float angle = 0.0f;
+    double angle = 0.0f;
 
     if ( m_airspeed < 40.0f )
     {

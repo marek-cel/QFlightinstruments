@@ -51,10 +51,6 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifdef WIN32
-#   include <float.h>
-#endif
-
 #include <math.h>
 
 #include "qfi_ALT.h"
@@ -136,14 +132,14 @@ void qfi_ALT::update()
 
 ////////////////////////////////////////////////////////////////////////////////
 
-void qfi_ALT::setAltitude( float altitude )
+void qfi_ALT::setAltitude( double altitude )
 {
     m_altitude = altitude;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 
-void qfi_ALT::setPressure( float pressure )
+void qfi_ALT::setPressure( double pressure )
 {
     m_pressure = pressure;
 
@@ -166,8 +162,8 @@ void qfi_ALT::resizeEvent( QResizeEvent *event )
 
 void qfi_ALT::init()
 {
-    m_scaleX = (float)width()  / (float)m_originalWidth;
-    m_scaleY = (float)height() / (float)m_originalHeight;
+    m_scaleX = (double)width()  / (double)m_originalWidth;
+    m_scaleY = (double)height() / (double)m_originalHeight;
 
     reset();
 
@@ -237,10 +233,10 @@ void qfi_ALT::updateView()
 {
     int altitude = ceil( m_altitude + 0.5 );
 
-    float angleH1 = m_altitude * 0.036f;
-    float angleH2 = ( altitude % 1000 ) * 0.36f;
-    float angleF1 = ( m_pressure - 28.0f ) * 100.0f;
-    float angleF3 = m_altitude * 0.0036f;
+    double angleH1 = m_altitude * 0.036f;
+    double angleH2 = ( altitude % 1000 ) * 0.36f;
+    double angleF1 = ( m_pressure - 28.0f ) * 100.0f;
+    double angleF3 = m_altitude * 0.0036f;
 
     m_itemHand_1->setRotation(   angleH1 );
     m_itemHand_2->setRotation(   angleH2 );

@@ -75,22 +75,22 @@ public:
     void update();
 
     /** @param heading [deg] */
-    void setHeading( float heading );
+    void setHeading( double heading );
 
     /** @param heading bug [deg] */
-    void setHeadingBug( float headingBug );
+    void setHeadingBug( double headingBug );
 
     /** @param course [deg] */
-    void setCourse( float course );
+    void setCourse( double course );
 
     /** @param bearing [deg] */
-    void setBearing( float bearing, bool visible = false );
+    void setBearing( double bearing, bool visible = false );
 
     /** @param deviation [-] */
-    void setDeviation( float deviation, bool visible = false );
+    void setDeviation( double deviation, bool visible = false );
 
     /** @param distance [nm] */
-    void setDistance( float distance, bool visible = false );
+    void setDistance( double distance, bool visible = false );
 
 protected:
 
@@ -124,26 +124,26 @@ private:
     QFont  m_hdgTextFont;
     QFont  m_dmeTextFont;
 
-    float m_heading;                    ///< [deg]
-    float m_headingBug;                 ///< [deg]
-    float m_course;
-    float m_bearing;
-    float m_deviation;
-    float m_distance;
+    double m_heading;                    ///< [deg]
+    double m_headingBug;                 ///< [deg]
+    double m_course;
+    double m_bearing;
+    double m_deviation;
+    double m_distance;
 
     bool m_bearingVisible;
     bool m_deviationVisible;
     bool m_distanceVisible;
 
-    float m_devBarDeltaX_new;
-    float m_devBarDeltaX_old;
-    float m_devBarDeltaY_new;
-    float m_devBarDeltaY_old;
+    double m_devBarDeltaX_new;
+    double m_devBarDeltaX_old;
+    double m_devBarDeltaY_new;
+    double m_devBarDeltaY_old;
 
-    float m_scaleX; ///<
-    float m_scaleY; ///<
+    double m_scaleX; ///<
+    double m_scaleY; ///<
 
-    float m_originalPixPerDev;
+    double m_originalPixPerDev;
 
     QPointF m_originalNavCtr;
 

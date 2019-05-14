@@ -51,10 +51,6 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifdef WIN32
-#   include <float.h>
-#endif
-
 #include <math.h>
 
 #include "qfi_HSI.h"
@@ -127,7 +123,7 @@ void qfi_HSI::update()
 
 ////////////////////////////////////////////////////////////////////////////////
 
-void qfi_HSI::setHeading( float heading )
+void qfi_HSI::setHeading( double heading )
 {
     m_heading = heading;
 }
@@ -147,8 +143,8 @@ void qfi_HSI::resizeEvent( QResizeEvent *event )
 
 void qfi_HSI::init()
 {
-    m_scaleX = (float)width()  / (float)m_originalWidth;
-    m_scaleY = (float)height() / (float)m_originalHeight;
+    m_scaleX = (double)width()  / (double)m_originalWidth;
+    m_scaleY = (double)height() / (double)m_originalHeight;
 
     reset();
 

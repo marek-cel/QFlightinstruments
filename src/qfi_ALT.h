@@ -75,10 +75,10 @@ public:
     void update();
 
     /** @param altitude [ft] */
-    void setAltitude( float altitude );
+    void setAltitude( double altitude );
 
     /** @param pressure [inHg] */
-    void setPressure( float aressure );
+    void setPressure( double aressure );
 
 protected:
 
@@ -95,11 +95,11 @@ private:
     QGraphicsSvgItem *m_itemHand_2;
     QGraphicsSvgItem *m_itemCase;
 
-    float m_altitude;
-    float m_pressure;
+    double m_altitude;
+    double m_pressure;
 
-    float m_scaleX;
-    float m_scaleY;
+    double m_scaleX;
+    double m_scaleY;
 
     const int m_originalHeight;
     const int m_originalWidth;

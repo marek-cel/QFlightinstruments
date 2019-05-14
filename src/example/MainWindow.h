@@ -82,7 +82,7 @@ private:
     int m_timerId;
     int m_steps;
 
-    float m_realTime;
+    double m_realTime;
 
     QTime m_time;
 };

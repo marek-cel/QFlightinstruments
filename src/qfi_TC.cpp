@@ -51,10 +51,6 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifdef WIN32
-#   include <float.h>
-#endif
-
 #include <math.h>
 
 #include "qfi_TC.h"
@@ -137,7 +133,7 @@ void qfi_TC::update()
 
 ////////////////////////////////////////////////////////////////////////////////
 
-void qfi_TC::setTurnRate( float turnRate )
+void qfi_TC::setTurnRate( double turnRate )
 {
     m_turnRate = turnRate;
 
@@ -147,7 +143,7 @@ void qfi_TC::setTurnRate( float turnRate )
 
 ////////////////////////////////////////////////////////////////////////////////
 
-void qfi_TC::setSlipSkid( float slipSkid )
+void qfi_TC::setSlipSkid( double slipSkid )
 {
     m_slipSkid = slipSkid;
 
@@ -170,8 +166,8 @@ void qfi_TC::resizeEvent( QResizeEvent *event )
 
 void qfi_TC::init()
 {
-    m_scaleX = (float)width()  / (float)m_originalWidth;
-    m_scaleY = (float)height() / (float)m_originalHeight;
+    m_scaleX = (double)width()  / (double)m_originalWidth;
+    m_scaleY = (double)height() / (double)m_originalHeight;
 
     reset();
 
@@ -232,12 +228,12 @@ void qfi_TC::reset()
 
 void qfi_TC::updateView()
 {
-    m_scaleX = (float)width()  / (float)m_originalWidth;
-    m_scaleY = (float)height() / (float)m_originalHeight;
+    m_scaleX = (double)width()  / (double)m_originalWidth;
+    m_scaleY = (double)height() / (double)m_originalHeight;
 
     m_itemBall->setRotation( -m_slipSkid );
 
-    float angle = ( m_turnRate / 3.0f ) * 20.0f;
+    double angle = ( m_turnRate / 3.0f ) * 20.0f;
 
     m_itemMark->setRotation( angle );
 

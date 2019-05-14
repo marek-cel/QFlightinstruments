@@ -75,7 +75,7 @@ public:
     void update();
 
     /** @param climb rate [ft/min] */
-    void setClimbRate( float climbRate );
+    void setClimbRate( double climbRate );
 
 protected:
 
@@ -89,10 +89,10 @@ private:
     QGraphicsSvgItem *m_itemHand;
     QGraphicsSvgItem *m_itemCase;
 
-    float m_climbRate;
+    double m_climbRate;
 
-    float m_scaleX;
-    float m_scaleY;
+    double m_scaleX;
+    double m_scaleY;
 
     const int m_originalHeight;
     const int m_originalWidth;

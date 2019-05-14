@@ -75,10 +75,10 @@ public:
     void update();
 
     /** @param turn rate [deg/s] */
-    void setTurnRate( float turnRate );
+    void setTurnRate( double turnRate );
 
     /** @param slip/skid ball angle [deg] */
-    void setSlipSkid( float slipSkid );
+    void setSlipSkid( double slipSkid );
 
 protected:
 
@@ -95,11 +95,11 @@ private:
     QGraphicsSvgItem *m_itemMark;
     QGraphicsSvgItem *m_itemCase;
 
-    float m_turnRate;
-    float m_slipSkid;
+    double m_turnRate;
+    double m_slipSkid;
 
-    float m_scaleX;
-    float m_scaleY;
+    double m_scaleX;
+    double m_scaleY;
 
     const int m_originalHeight;
     const int m_originalWidth;

@@ -80,7 +80,7 @@ public:
         m_asi->update();
     }
 
-    inline void setAirspeed( float airspeed )
+    inline void setAirspeed( double airspeed )
     {
         m_asi->setAirspeed( airspeed );
     }

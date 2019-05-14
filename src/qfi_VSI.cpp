@@ -51,10 +51,6 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifdef WIN32
-#   include <float.h>
-#endif
-
 #include <math.h>
 
 #include "qfi_VSI.h"
@@ -129,7 +125,7 @@ void qfi_VSI::update()
 
 ////////////////////////////////////////////////////////////////////////////////
 
-void qfi_VSI::setClimbRate( float climbRate )
+void qfi_VSI::setClimbRate( double climbRate )
 {
     m_climbRate = climbRate;
 
@@ -152,8 +148,8 @@ void qfi_VSI::resizeEvent( QResizeEvent *event )
 
 void qfi_VSI::init()
 {
-    m_scaleX = (float)width()  / (float)m_originalWidth;
-    m_scaleY = (float)height() / (float)m_originalHeight;
+    m_scaleX = (double)width()  / (double)m_originalWidth;
+    m_scaleY = (double)height() / (double)m_originalHeight;
 
     reset();
 

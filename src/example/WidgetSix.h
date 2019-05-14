@@ -80,47 +80,47 @@ public:
 
     void update();
 
-    inline void setRoll( float roll )
+    inline void setRoll( double roll )
     {
         m_widgetADI->setRoll( roll );
     }
 
-    inline void setPitch( float pitch )
+    inline void setPitch( double pitch )
     {
         m_widgetADI->setPitch( pitch );
     }
 
-    inline void setAltitude( float altitude )
+    inline void setAltitude( double altitude )
     {
         m_widgetALT->setAltitude( altitude );
     }
 
-    inline void setPressure( float pressure )
+    inline void setPressure( double pressure )
     {
         m_widgetALT->setPressure( pressure );
     }
 
-    inline void setAirspeed( float airspeed )
+    inline void setAirspeed( double airspeed )
     {
         m_widgetASI->setAirspeed( airspeed );
     }
 
-    inline void setHeading( float heading )
+    inline void setHeading( double heading )
     {
         m_widgetHSI->setHeading( heading );
     }
 
-    inline void setTurnRate( float turnRate )
+    inline void setTurnRate( double turnRate )
     {
         m_widgetTC->setTurnRate( turnRate );
     }
 
-    inline void setSlipSkid( float slipSkid )
+    inline void setSlipSkid( double slipSkid )
     {
         m_widgetTC->setSlipSkid( slipSkid );
     }
 
-    inline void setClimbRate( float climbRate )
+    inline void setClimbRate( double climbRate )
     {
         m_widgetVSI->setClimbRate( climbRate );
     }

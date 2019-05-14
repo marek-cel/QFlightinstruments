@@ -80,12 +80,12 @@ public:
         m_alt->update();
     }
 
-    inline void setAltitude( float altitude )
+    inline void setAltitude( double altitude )
     {
         m_alt->setAltitude( altitude );
     }
 
-    inline void setPressure( float pressure )
+    inline void setPressure( double pressure )
     {
         m_alt->setPressure( pressure );
     }

@@ -75,7 +75,7 @@ public:
     void update();
 
     /** @param airspeed [kts] */
-    void setAirspeed( float airspeed );
+    void setAirspeed( double airspeed );
 
 protected:
 
@@ -89,10 +89,10 @@ private:
     QGraphicsSvgItem *m_itemHand;
     QGraphicsSvgItem *m_itemCase;
 
-    float m_airspeed;
+    double m_airspeed;
 
-    float m_scaleX;
-    float m_scaleY;
+    double m_scaleX;
+    double m_scaleY;
 
     const int m_originalHeight;
     const int m_originalWidth;

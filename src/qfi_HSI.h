@@ -75,7 +75,7 @@ public:
     void update();
 
     /** @param heading [deg] */
-    void setHeading( float heading );
+    void setHeading( double heading );
 
 protected:
 
@@ -88,10 +88,10 @@ private:
     QGraphicsSvgItem *m_itemFace;
     QGraphicsSvgItem *m_itemCase;
 
-    float m_heading;
+    double m_heading;
 
-    float m_scaleX;
-    float m_scaleY;
+    double m_scaleX;
+    double m_scaleY;
 
     const int m_originalHeight;
     const int m_originalWidth;

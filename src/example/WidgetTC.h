@@ -80,12 +80,12 @@ public:
         m_tc->update();
     }
 
-    inline void setTurnRate( float turnRate )
+    inline void setTurnRate( double turnRate )
     {
         m_tc->setTurnRate( turnRate );
     }
 
-    inline void setSlipSkid( float slipSkid )
+    inline void setSlipSkid( double slipSkid )
     {
         m_tc->setSlipSkid( slipSkid );
     }

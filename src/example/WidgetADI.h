@@ -80,12 +80,12 @@ public:
         m_adi->update();
     }
 
-    inline void setRoll( float roll )
+    inline void setRoll( double roll )
     {
         m_adi->setRoll( roll );
     }
 
-    inline void setPitch( float pitch )
+    inline void setPitch( double pitch )
     {
         m_adi->setPitch( pitch );
     }

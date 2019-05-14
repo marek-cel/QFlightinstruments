@@ -53,10 +53,6 @@
 
 #include <iostream>
 
-#ifdef WIN32
-#   include <float.h>
-#endif
-
 #include <math.h>
 #include <stdio.h>
 
@@ -212,7 +208,7 @@ void qfi_NAV::update()
 
 ////////////////////////////////////////////////////////////////////////////////
 
-void qfi_NAV::setHeading( float heading )
+void qfi_NAV::setHeading( double heading )
 {
     m_heading = heading;
 
@@ -222,7 +218,7 @@ void qfi_NAV::setHeading( float heading )
 
 ////////////////////////////////////////////////////////////////////////////////
 
-void qfi_NAV::setHeadingBug( float headingBug )
+void qfi_NAV::setHeadingBug( double headingBug )
 {
     m_headingBug = headingBug;
 
@@ -232,7 +228,7 @@ void qfi_NAV::setHeadingBug( float headingBug )
 
 ////////////////////////////////////////////////////////////////////////////////
 
-void qfi_NAV::setCourse( float course )
+void qfi_NAV::setCourse( double course )
 {
     m_course = course;
 
@@ -242,7 +238,7 @@ void qfi_NAV::setCourse( float course )
 
 ////////////////////////////////////////////////////////////////////////////////
 
-void qfi_NAV::setBearing( float bearing, bool visible )
+void qfi_NAV::setBearing( double bearing, bool visible )
 {
     m_bearing        = bearing;
     m_bearingVisible = visible;
@@ -253,7 +249,7 @@ void qfi_NAV::setBearing( float bearing, bool visible )
 
 ////////////////////////////////////////////////////////////////////////////////
 
-void qfi_NAV::setDeviation( float deviation, bool visible )
+void qfi_NAV::setDeviation( double deviation, bool visible )
 {
     m_deviation        = deviation;
     m_deviationVisible = visible;
@@ -264,7 +260,7 @@ void qfi_NAV::setDeviation( float deviation, bool visible )
 
 ////////////////////////////////////////////////////////////////////////////////
 
-void qfi_NAV::setDistance( float distance, bool visible )
+void qfi_NAV::setDistance( double distance, bool visible )
 {
     m_distance        = fabs( distance );
     m_distanceVisible = visible;
@@ -285,8 +281,8 @@ void qfi_NAV::resizeEvent( QResizeEvent *event )
 
 void qfi_NAV::init()
 {
-    m_scaleX = (float)width()  / (float)m_originalWidth;
-    m_scaleY = (float)height() / (float)m_originalHeight;
+    m_scaleX = (double)width()  / (double)m_originalWidth;
+    m_scaleY = (double)height() / (double)m_originalHeight;
 
     m_itemBack = new QGraphicsSvgItem( ":/qfi/images/nav/nav_back.svg" );
     m_itemBack->setCacheMode( QGraphicsItem::NoCache );
@@ -419,8 +415,8 @@ void qfi_NAV::reset()
 
 void qfi_NAV::updateView()
 {
-    m_scaleX = (float)width()  / (float)m_originalWidth;
-    m_scaleY = (float)height() / (float)m_originalHeight;
+    m_scaleX = (double)width()  / (double)m_originalWidth;
+    m_scaleY = (double)height() / (double)m_originalHeight;
 
     m_itemCrsArrow->setRotation( -m_heading + m_course );
     m_itemHdgBug->setRotation( -m_heading + m_headingBug );
@@ -441,21 +437,21 @@ void qfi_NAV::updateView()
         m_itemDevBar->setVisible( true );
         m_itemDevScale->setVisible( true );
 
-        float angle_deg = -m_heading + m_course;
+        double angle_deg = -m_heading + m_course;
 #       ifndef M_PI
-        float angle_rad = 3.14159265358979323846 * angle_deg / 180.0f;
+        double angle_rad = 3.14159265358979323846 * angle_deg / 180.0f;
 #       else
-        float angle_rad = M_PI * angle_deg / 180.0f;
+        double angle_rad = M_PI * angle_deg / 180.0f;
 #       endif
 
 
-        float sinAngle = sin( angle_rad );
-        float cosAngle = cos( angle_rad );
+        double sinAngle = sin( angle_rad );
+        double cosAngle = cos( angle_rad );
 
         m_itemDevBar->setRotation( angle_deg );
         m_itemDevScale->setRotation( angle_deg );
 
-        float delta  = m_originalPixPerDev * m_deviation;
+        double delta  = m_originalPixPerDev * m_deviation;
 
         m_devBarDeltaX_new = m_scaleX * delta * cosAngle;
         m_devBarDeltaY_new = m_scaleY * delta * sinAngle;

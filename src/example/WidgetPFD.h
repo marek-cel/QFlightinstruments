@@ -81,69 +81,69 @@ public:
         m_pfd->update();
     }
 
-    inline void setRoll( float roll )
+    inline void setRoll( double roll )
     {
         m_pfd->setRoll( roll );
     }
 
-    inline void setPitch( float pitch )
+    inline void setPitch( double pitch )
     {
         m_pfd->setPitch( pitch );
     }
 
-    inline void setFlightPathMarker( float aoa, float sideslip )
+    inline void setFlightPathMarker( double aoa, double sideslip )
     {
         m_pfd->setFlightPathMarker( aoa, sideslip );
     }
 
-    inline void setSlipSkid( float slipSkid )
+    inline void setSlipSkid( double slipSkid )
     {
         m_pfd->setSlipSkid( slipSkid );
     }
 
-    inline void setDevH( float devH )
+    inline void setDevH( double devH )
     {
         m_pfd->setBarH( devH );
         m_pfd->setDotH( devH );
     }
 
-    inline void setDevV( float devV )
+    inline void setDevV( double devV )
     {
         m_pfd->setBarV( devV );
         m_pfd->setDotV( devV );
     }
 
-    inline void setAltitude( float altitude )
+    inline void setAltitude( double altitude )
     {
         m_pfd->setAltitude( altitude );
     }
 
-    inline void setPressure( float pressure )
+    inline void setPressure( double pressure )
     {
         m_pfd->setPressure( pressure, qfi_PFD::IN );
     }
 
-    inline void setAirspeed( float airspeed )
+    inline void setAirspeed( double airspeed )
     {
         m_pfd->setAirspeed( airspeed );
     }
 
-    inline void setMachNo( float machNo )
+    inline void setMachNo( double machNo )
     {
         m_pfd->setMachNo( machNo );
     }
 
-    inline void setHeading( float heading )
+    inline void setHeading( double heading )
     {
         m_pfd->setHeading( heading );
     }
 
-    inline void setTurnRate( float turnRate )
+    inline void setTurnRate( double turnRate )
     {
         m_pfd->setTurnRate( turnRate );
     }
 
-    inline void setClimbRate( float climbRate )
+    inline void setClimbRate( double climbRate )
     {
         m_pfd->setClimbRate( climbRate );
     }
@@ -153,7 +153,7 @@ public:
         m_pfd->setIdent( ident, isVisible );
     }
 
-    inline void setDistance( float dist, bool isVisible )
+    inline void setDistance( double dist, bool isVisible )
     {
         m_pfd->setDistance( dist, isVisible );
     }
