@@ -63,7 +63,7 @@ class qfi_HSI : public QGraphicsView
 public:
 
     /** Constructor. */
-    qfi_HSI( QWidget *parent = 0 );
+    qfi_HSI( QWidget *parent = nullptr );
 
     /** Destructor. */
     virtual ~qfi_HSI();
