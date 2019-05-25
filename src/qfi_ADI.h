@@ -63,7 +63,7 @@ class qfi_ADI : public QGraphicsView
 public:
 
     /** Constructor. */
-    qfi_ADI( QWidget *parent = 0 );
+    qfi_ADI( QWidget *parent = nullptr );
 
     /** Destructor. */
     virtual ~qfi_ADI();

@@ -63,7 +63,7 @@ class qfi_ALT : public QGraphicsView
 public:
 
     /** Constructor. */
-    qfi_ALT( QWidget *parent = 0 );
+    qfi_ALT( QWidget *parent = nullptr );
 
     /** Destructor. */
     virtual ~qfi_ALT();

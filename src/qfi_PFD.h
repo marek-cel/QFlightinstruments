@@ -72,7 +72,7 @@ public:
     };
 
     /** Constructor. */
-    explicit qfi_PFD( QWidget *parent = 0 );
+    explicit qfi_PFD( QWidget *parent = nullptr );
 
     /** Destructor. */
     ~qfi_PFD();

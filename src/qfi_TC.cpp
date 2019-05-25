@@ -64,14 +64,14 @@
 qfi_TC::qfi_TC( QWidget *parent ) :
     QGraphicsView ( parent ),
 
-    m_scene ( 0 ),
+    m_scene ( nullptr ),
 
-    m_itemBack   ( 0 ),
-    m_itemBall   ( 0 ),
-    m_itemFace_1 ( 0 ),
-    m_itemFace_2 ( 0 ),
-    m_itemMark   ( 0 ),
-    m_itemCase   ( 0 ),
+    m_itemBack   ( nullptr ),
+    m_itemBall   ( nullptr ),
+    m_itemFace_1 ( nullptr ),
+    m_itemFace_2 ( nullptr ),
+    m_itemMark   ( nullptr ),
+    m_itemCase   ( nullptr ),
 
     m_turnRate ( 0.0f ),
     m_slipSkid ( 0.0f ),
@@ -106,11 +106,11 @@ qfi_TC::qfi_TC( QWidget *parent ) :
 
 qfi_TC::~qfi_TC()
 {
-    if ( m_scene )
+    if ( m_scene != nullptr )
     {
         m_scene->clear();
         delete m_scene;
-        m_scene = 0;
+        m_scene = nullptr;
     }
 
     reset();
@@ -222,7 +222,7 @@ void qfi_TC::init()
 
 void qfi_TC::reset()
 {
-    m_itemCase = 0;
+    m_itemCase = nullptr;
 
     m_turnRate = 0.0f;
     m_slipSkid = 0.0f;

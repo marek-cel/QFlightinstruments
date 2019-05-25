@@ -63,7 +63,7 @@ class qfi_NAV : public QGraphicsView
 public:
 
     /** Constructor. */
-    explicit qfi_NAV( QWidget *parent = 0 );
+    explicit qfi_NAV( QWidget *parent = nullptr );
 
     /** Destructor. */
     virtual ~qfi_NAV();
