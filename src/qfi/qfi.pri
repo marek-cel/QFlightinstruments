@@ -1,4 +1,9 @@
 HEADERS += \
+    $$PWD/qfi_doxygen.h
+
+################################################################################
+
+HEADERS += \
     $$PWD/qfi_Colors.h \
     $$PWD/qfi_Fonts.h
 
