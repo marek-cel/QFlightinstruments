@@ -1,31 +1,5 @@
-/***************************************************************************//**
- * @file example/WidgetSix.cpp
- * @author  Marek M. Cel <marekcel@marekcel.pl>
- *
- * @section LICENSE
- *
- * Copyright (C) 2013 Marek M. Cel
- *
- * This file is part of QFlightInstruments. You can redistribute and modify it
- * under the terms of GNU General Public License as published by the Free
- * Software Foundation; either version 3 of the License, or (at your option)
- * any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
- * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
- * for more details.
- *
- * You should have received a copy of the GNU General Public License along
- * with this program; if not, write to the Free Software Foundation, Inc.
- * 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
- *
- * Further information about the GNU General Public License can also be found
- * on the world wide web at http://www.gnu.org.
- *
- * ---
- *
- * Copyright (C) 2013 Marek M. Cel
+/****************************************************************************//*
+ * Copyright (C) 2021 Marek M. Cel
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the "Software"),
@@ -45,53 +19,37 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
  * IN THE SOFTWARE.
  ******************************************************************************/
-#ifndef WIDGETSIX_CPP
-#define WIDGETSIX_CPP
-#endif
 
-////////////////////////////////////////////////////////////////////////////////
-
-#include "WidgetSix.h"
-#include "ui_WidgetSix.h"
+#include <example/WidgetSix.h>
+#include <ui_WidgetSix.h>
 
 ////////////////////////////////////////////////////////////////////////////////
 
 WidgetSix::WidgetSix( QWidget *parent ) :
     QWidget ( parent ),
-    m_ui ( new Ui::WidgetSix ),
+    _ui ( new Ui::WidgetSix ),
 
-    m_widgetADI ( 0 ),
-    m_widgetALT ( 0 ),
-    m_widgetASI ( 0 ),
-    m_widgetHSI ( 0 ),
-    m_widgetTC  ( 0 ),
-    m_widgetVSI ( 0 )
+    _widgetAI  ( Q_NULLPTR ),
+    _widgetALT ( Q_NULLPTR ),
+    _widgetASI ( Q_NULLPTR ),
+    _widgetHI  ( Q_NULLPTR ),
+    _widgetTC  ( Q_NULLPTR ),
+    _widgetVSI ( Q_NULLPTR )
 {
-    m_ui->setupUi( this );
+    _ui->setupUi( this );
 
-    m_widgetADI = m_ui->widgetADI;
-    m_widgetALT = m_ui->widgetALT;
-    m_widgetASI = m_ui->widgetASI;
-    m_widgetHSI = m_ui->widgetHSI;
-    m_widgetTC  = m_ui->widgetTC;
-    m_widgetVSI = m_ui->widgetVSI;
+    _widgetAI  = _ui->widgetAI;
+    _widgetALT = _ui->widgetALT;
+    _widgetASI = _ui->widgetASI;
+    _widgetHI  = _ui->widgetHI;
+    _widgetTC  = _ui->widgetTC;
+    _widgetVSI = _ui->widgetVSI;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 
 WidgetSix::~WidgetSix()
 {
-    if ( m_ui ) delete m_ui; m_ui = 0;
-}
-
-////////////////////////////////////////////////////////////////////////////////
-
-void WidgetSix::update()
-{
-    m_ui->widgetADI->update();
-    m_ui->widgetALT->update();
-    m_ui->widgetASI->update();
-    m_ui->widgetHSI->update();
-    m_ui->widgetTC->update();
-    m_ui->widgetVSI->update();
+    if ( _ui ) delete _ui;
+    _ui = Q_NULLPTR;
 }

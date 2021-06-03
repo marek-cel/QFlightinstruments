@@ -1,0 +1,78 @@
+<RCC>
+    <qresource prefix="/qfi/">
+      
+        <file>images/eadi/eadi_back.svg</file>
+        <file>images/eadi/eadi_mask.svg</file>
+        <file>images/eadi/eadi_adi_back.svg</file>
+        <file>images/eadi/eadi_adi_doth.svg</file>
+        <file>images/eadi/eadi_adi_dotv.svg</file>
+        <file>images/eadi/eadi_adi_fd.svg</file>
+        <file>images/eadi/eadi_adi_ladd.svg</file>
+        <file>images/eadi/eadi_adi_mask.svg</file>
+        <file>images/eadi/eadi_adi_fpm.svg</file>
+        <file>images/eadi/eadi_adi_fpmx.svg</file>
+        <file>images/eadi/eadi_adi_roll.svg</file>
+        <file>images/eadi/eadi_adi_scaleh.svg</file>
+        <file>images/eadi/eadi_adi_scalev.svg</file>
+        <file>images/eadi/eadi_adi_slip.svg</file>
+        <file>images/eadi/eadi_adi_stall.svg</file>
+        <file>images/eadi/eadi_adi_turn.svg</file>
+        <file>images/eadi/eadi_alt_back.svg</file>
+        <file>images/eadi/eadi_alt_bug.svg</file>
+        <file>images/eadi/eadi_alt_frame.svg</file>
+        <file>images/eadi/eadi_alt_ground.svg</file>
+        <file>images/eadi/eadi_alt_scale.svg</file>
+        <file>images/eadi/eadi_asi_back.svg</file>
+        <file>images/eadi/eadi_asi_bug.svg</file>
+        <file>images/eadi/eadi_asi_frame.svg</file>
+        <file>images/eadi/eadi_asi_scale.svg</file>
+        <file>images/eadi/eadi_asi_vne.svg</file>
+        <file>images/eadi/eadi_hsi_back.svg</file>
+        <file>images/eadi/eadi_hsi_bug.svg</file>
+        <file>images/eadi/eadi_hsi_face.svg</file>
+        <file>images/eadi/eadi_hsi_marks.svg</file>
+        <file>images/eadi/eadi_vsi_scale.svg</file>
+        
+        <file>images/ehsi/ehsi_back.svg</file>
+        <file>images/ehsi/ehsi_mask.svg</file>
+        <file>images/ehsi/ehsi_mark.svg</file>
+        <file>images/ehsi/ehsi_brg_arrow.svg</file>
+        <file>images/ehsi/ehsi_cdi_from.svg</file>
+        <file>images/ehsi/ehsi_cdi_to.svg</file>
+        <file>images/ehsi/ehsi_crs_arrow.svg</file>
+        <file>images/ehsi/ehsi_dev_bar.svg</file>
+        <file>images/ehsi/ehsi_dev_scale.svg</file>
+        <file>images/ehsi/ehsi_hdg_bug.svg</file>
+        <file>images/ehsi/ehsi_hdg_scale.svg</file>
+        
+        <file>images/ai/ai_back.svg</file>
+        <file>images/ai/ai_case.svg</file>
+        <file>images/ai/ai_face.svg</file>
+        <file>images/ai/ai_ring.svg</file>
+        
+        <file>images/alt/alt_case.svg</file>
+        <file>images/alt/alt_face_1.svg</file>
+        <file>images/alt/alt_face_2.svg</file>
+        <file>images/alt/alt_face_3.svg</file>
+        <file>images/alt/alt_hand_1.svg</file>
+        <file>images/alt/alt_hand_2.svg</file>
+        
+        <file>images/asi/asi_case.svg</file>
+        <file>images/asi/asi_face.svg</file>
+        <file>images/asi/asi_hand.svg</file>
+        
+        <file>images/hi/hi_case.svg</file>
+        <file>images/hi/hi_face.svg</file>
+
+        <file>images/tc/tc_case.svg</file>
+        <file>images/tc/tc_back.svg</file>
+        <file>images/tc/tc_ball.svg</file>
+        <file>images/tc/tc_face_1.svg</file>
+        <file>images/tc/tc_face_2.svg</file>
+        <file>images/tc/tc_mark.svg</file>
+        
+        <file>images/vsi/vsi_case.svg</file>
+        <file>images/vsi/vsi_face.svg</file>
+        <file>images/vsi/vsi_hand.svg</file>
+    </qresource>
+</RCC>

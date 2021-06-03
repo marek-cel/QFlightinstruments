@@ -46,7 +46,7 @@
   <customwidget>
    <class>qfi_VSI</class>
    <extends>QGraphicsView</extends>
-   <header>qfi_VSI.h</header>
+   <header>qfi/qfi_VSI.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

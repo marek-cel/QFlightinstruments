@@ -1,31 +1,5 @@
-/***************************************************************************//**
- * @file example/WidgetVSI.h
- * @author  Marek M. Cel <marekcel@marekcel.pl>
- *
- * @section LICENSE
- *
- * Copyright (C) 2013 Marek M. Cel
- *
- * This file is part of QFlightInstruments. You can redistribute and modify it
- * under the terms of GNU General Public License as published by the Free
- * Software Foundation; either version 3 of the License, or (at your option)
- * any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
- * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
- * for more details.
- *
- * You should have received a copy of the GNU General Public License along
- * with this program; if not, write to the Free Software Foundation, Inc.
- * 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
- *
- * Further information about the GNU General Public License can also be found
- * on the world wide web at http://www.gnu.org.
- *
- * ---
- *
- * Copyright (C) 2013 Marek M. Cel
+/****************************************************************************//*
+ * Copyright (C) 2021 Marek M. Cel
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the "Software"),
@@ -52,7 +26,7 @@
 
 #include <QWidget>
 
-#include <qfi_VSI.h>
+#include <qfi/qfi_VSI.h>
 
 #include "LayoutSquare.h"
 
@@ -71,25 +45,22 @@ class WidgetVSI : public QWidget
 
 public:
 
-    explicit WidgetVSI( QWidget *parent = 0 );
+    explicit WidgetVSI( QWidget *parent = Q_NULLPTR );
 
     ~WidgetVSI();
 
-    inline void update()
-    {
-        m_vsi->update();
-    }
+    inline void redraw() { _vsi->redraw(); }
 
-    inline void setClimbRate( float climbRate )
+    inline void setClimbRate( double climbRate )
     {
-        m_vsi->setClimbRate( climbRate );
+        _vsi->setClimbRate( climbRate );
     }
 
 private:
 
-    Ui::WidgetVSI *m_ui;
-    qfi_VSI       *m_vsi;
-    LayoutSquare  *m_layoutSq;
+    Ui::WidgetVSI *_ui;
+    qfi_VSI       *_vsi;
+    LayoutSquare  *_layoutSq;
 
     void setupUi();
 };

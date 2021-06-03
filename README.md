@@ -1,4 +1,38 @@
 # QFlightinstruments
-This is collection of Qt4 and Qt5 widgets of flight instruments, inluding Attitude Indicator, Airspeed Indicator, Vertical Speed Indicator, Turn Indicator, Horizontal Situation Indicator, Primary Flight Display and Navigation Display.
+QFlightinstruments is a collection of flight instruments Qt widgets.
 
-![Example](qfiexample_01.jpg)
+## Composition
+
+Project consists Qt flights instruments library and an example Qt GUI application.
+
+### Electronic Flight Instrument System
+
+* Electronic Attitude Direction Indicator (EADI)
+* Electronic Horizontal Situation Indicator (EHSI)
+
+![QFI](screenshot_01.jpg)
+
+### Basic Six
+
+* Airspeed Indicator (ASI)
+* Attitude Indicator (AI)
+* Altimeter (ALT)
+* Turn Coordinator (TC)
+* Heading Indicator (HI)
+* Vertical Speed Indicator (VSI)
+
+![QFI](screenshot_02.jpg)
+
+## Usage
+
+Both flight instruments library and an example application are intended to be built with ```qmake```. There are appropriate Qt Creator project files. Flight instruments library is located in the ```src/qfi/``` directory, it includes source code files, Qt Creator ```pri``` file, Qt Resource Compiler ```qrc``` file and instruments graphics files.
+
+```example1.pro``` project file is intended to build an example application and incorporates instruments library with static linking.
+
+```example2.pro``` project file is intended to build an example application and link to dynamic shared object containing instruments library.
+
+Both projects share the same source code.
+
+```libqfi.pro``` project files allows to create dynamic shared object containing instruments library.
+
+Visit [http://marekcel.pl/qflightinstruments](http://marekcel.pl/qflightinstruments) for more information.

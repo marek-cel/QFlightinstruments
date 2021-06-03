@@ -46,7 +46,7 @@
   <customwidget>
    <class>qfi_ALT</class>
    <extends>QGraphicsView</extends>
-   <header>qfi_ALT.h</header>
+   <header>qfi/qfi_ALT.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

@@ -1,0 +1,92 @@
+/****************************************************************************//*
+ * Copyright (C) 2021 Marek M. Cel
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of this software and associated documentation files (the "Software"),
+ * to deal in the Software without restriction, including without limitation
+ * the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom
+ * the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included
+ * in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+ * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ * IN THE SOFTWARE.
+ ******************************************************************************/
+#ifndef QFI_VSI_H
+#define QFI_VSI_H
+
+////////////////////////////////////////////////////////////////////////////////
+
+#include <QGraphicsView>
+#include <QGraphicsSvgItem>
+
+////////////////////////////////////////////////////////////////////////////////
+
+/**
+ * @brief Vertical Speed Indicator widget class.
+ */
+class qfi_VSI : public QGraphicsView
+{
+    Q_OBJECT
+
+public:
+
+    /** Constructor. */
+    qfi_VSI( QWidget *parent = Q_NULLPTR );
+
+    /** Destructor. */
+    virtual ~qfi_VSI();
+
+    /** Reinitiates widget. */
+    void reinit();
+
+    /** Refreshes (redraws) widget. */
+    void redraw();
+
+    /** @param climb rate [ft/min] */
+    void setClimbRate( double climbRate );
+
+protected:
+
+    /** */
+    void resizeEvent( QResizeEvent *event );
+
+private:
+
+    QGraphicsScene *_scene;
+
+    QGraphicsSvgItem *_itemFace;
+    QGraphicsSvgItem *_itemHand;
+    QGraphicsSvgItem *_itemCase;
+
+    double _climbRate;
+
+    double _scaleX;
+    double _scaleY;
+
+    const int _originalHeight;
+    const int _originalWidth;
+
+    QPointF _originalVsiCtr;
+
+    const int _faceZ;
+    const int _handZ;
+    const int _caseZ;
+
+    void init();
+
+    void reset();
+
+    void updateView();
+};
+
+////////////////////////////////////////////////////////////////////////////////
+
+#endif // QFI_VSI_H

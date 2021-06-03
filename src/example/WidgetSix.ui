@@ -20,18 +20,18 @@
       <widget class="WidgetASI" name="widgetASI" native="true">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>1</horstretch>
-         <verstretch>0</verstretch>
+         <horstretch>99</horstretch>
+         <verstretch>99</verstretch>
         </sizepolicy>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="WidgetADI" name="widgetADI" native="true">
+      <widget class="WidgetAI" name="widgetAI" native="true">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>1</horstretch>
-         <verstretch>0</verstretch>
+         <horstretch>99</horstretch>
+         <verstretch>99</verstretch>
         </sizepolicy>
        </property>
       </widget>
@@ -40,8 +40,8 @@
       <widget class="WidgetALT" name="widgetALT" native="true">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>1</horstretch>
-         <verstretch>0</verstretch>
+         <horstretch>99</horstretch>
+         <verstretch>99</verstretch>
         </sizepolicy>
        </property>
       </widget>
@@ -50,18 +50,18 @@
       <widget class="WidgetTC" name="widgetTC" native="true">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>1</horstretch>
-         <verstretch>0</verstretch>
+         <horstretch>99</horstretch>
+         <verstretch>99</verstretch>
         </sizepolicy>
        </property>
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="WidgetHSI" name="widgetHSI" native="true">
+      <widget class="WidgetHI" name="widgetHI" native="true">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>1</horstretch>
-         <verstretch>0</verstretch>
+         <horstretch>99</horstretch>
+         <verstretch>99</verstretch>
         </sizepolicy>
        </property>
       </widget>
@@ -70,8 +70,8 @@
       <widget class="WidgetVSI" name="widgetVSI" native="true">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>1</horstretch>
-         <verstretch>0</verstretch>
+         <horstretch>99</horstretch>
+         <verstretch>99</verstretch>
         </sizepolicy>
        </property>
       </widget>
@@ -82,39 +82,39 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>WidgetADI</class>
-   <extends>QWidget</extends>
-   <header>WidgetADI.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
    <class>WidgetASI</class>
    <extends>QWidget</extends>
-   <header>WidgetASI.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>WidgetHSI</class>
-   <extends>QWidget</extends>
-   <header>WidgetHSI.h</header>
+   <header>example/WidgetASI.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>WidgetALT</class>
    <extends>QWidget</extends>
-   <header>WidgetALT.h</header>
+   <header>example/WidgetALT.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>WidgetTC</class>
    <extends>QWidget</extends>
-   <header>WidgetTC.h</header>
+   <header>example/WidgetTC.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>WidgetVSI</class>
    <extends>QWidget</extends>
-   <header>WidgetVSI.h</header>
+   <header>example/WidgetVSI.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WidgetAI</class>
+   <extends>QWidget</extends>
+   <header>example/WidgetAI.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WidgetHI</class>
+   <extends>QWidget</extends>
+   <header>example/WidgetHI.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

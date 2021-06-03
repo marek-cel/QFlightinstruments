@@ -1,31 +1,5 @@
-/***************************************************************************//**
- * @file example/WidgetTC.h
- * @author  Marek M. Cel <marekcel@marekcel.pl>
- *
- * @section LICENSE
- *
- * Copyright (C) 2013 Marek M. Cel
- *
- * This file is part of QFlightInstruments. You can redistribute and modify it
- * under the terms of GNU General Public License as published by the Free
- * Software Foundation; either version 3 of the License, or (at your option)
- * any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
- * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
- * for more details.
- *
- * You should have received a copy of the GNU General Public License along
- * with this program; if not, write to the Free Software Foundation, Inc.
- * 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
- *
- * Further information about the GNU General Public License can also be found
- * on the world wide web at http://www.gnu.org.
- *
- * ---
- *
- * Copyright (C) 2013 Marek M. Cel
+/****************************************************************************//*
+ * Copyright (C) 2021 Marek M. Cel
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the "Software"),
@@ -52,7 +26,7 @@
 
 #include <QWidget>
 
-#include <qfi_TC.h>
+#include <qfi/qfi_TC.h>
 
 #include "LayoutSquare.h"
 
@@ -71,30 +45,27 @@ class WidgetTC : public QWidget
 
 public:
 
-    explicit WidgetTC( QWidget *parent = 0 );
+    explicit WidgetTC( QWidget *parent = Q_NULLPTR );
 
     ~WidgetTC();
 
-    inline void update()
+    inline void redraw() { _tc->redraw(); }
+
+    inline void setTurnRate( double turnRate )
     {
-        m_tc->update();
+        _tc->setTurnRate( turnRate );
     }
 
-    inline void setTurnRate( float turnRate )
+    inline void setSlipSkid( double slipSkid )
     {
-        m_tc->setTurnRate( turnRate );
-    }
-
-    inline void setSlipSkid( float slipSkid )
-    {
-        m_tc->setSlipSkid( slipSkid );
+        _tc->setSlipSkid( slipSkid );
     }
 
 private:
 
-    Ui::WidgetTC *m_ui;
-    qfi_TC       *m_tc;
-    LayoutSquare *m_layoutSq;
+    Ui::WidgetTC *_ui;
+    qfi_TC       *_tc;
+    LayoutSquare *_layoutSq;
 
     void setupUi();
 };

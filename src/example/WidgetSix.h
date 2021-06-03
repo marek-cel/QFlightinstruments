@@ -1,31 +1,5 @@
-/***************************************************************************//**
- * @file example/WidgetSix.h
- * @author  Marek M. Cel <marekcel@marekcel.pl>
- *
- * @section LICENSE
- *
- * Copyright (C) 2013 Marek M. Cel
- *
- * This file is part of QFlightInstruments. You can redistribute and modify it
- * under the terms of GNU General Public License as published by the Free
- * Software Foundation; either version 3 of the License, or (at your option)
- * any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
- * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
- * for more details.
- *
- * You should have received a copy of the GNU General Public License along
- * with this program; if not, write to the Free Software Foundation, Inc.
- * 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
- *
- * Further information about the GNU General Public License can also be found
- * on the world wide web at http://www.gnu.org.
- *
- * ---
- *
- * Copyright (C) 2013 Marek M. Cel
+/****************************************************************************//*
+ * Copyright (C) 2021 Marek M. Cel
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the "Software"),
@@ -52,10 +26,10 @@
 
 #include <QWidget>
 
-#include "WidgetADI.h"
+#include "WidgetAI.h"
 #include "WidgetALT.h"
 #include "WidgetASI.h"
-#include "WidgetHSI.h"
+#include "WidgetHI.h"
 #include "WidgetTC.h"
 #include "WidgetVSI.h"
 
@@ -74,67 +48,27 @@ class WidgetSix : public QWidget
 
 public:
 
-    explicit WidgetSix( QWidget *parent = 0 );
+    explicit WidgetSix( QWidget *parent = Q_NULLPTR );
 
     ~WidgetSix();
 
-    void update();
-
-    inline void setRoll( float roll )
-    {
-        m_widgetADI->setRoll( roll );
-    }
-
-    inline void setPitch( float pitch )
-    {
-        m_widgetADI->setPitch( pitch );
-    }
-
-    inline void setAltitude( float altitude )
-    {
-        m_widgetALT->setAltitude( altitude );
-    }
-
-    inline void setPressure( float pressure )
-    {
-        m_widgetALT->setPressure( pressure );
-    }
-
-    inline void setAirspeed( float airspeed )
-    {
-        m_widgetASI->setAirspeed( airspeed );
-    }
-
-    inline void setHeading( float heading )
-    {
-        m_widgetHSI->setHeading( heading );
-    }
-
-    inline void setTurnRate( float turnRate )
-    {
-        m_widgetTC->setTurnRate( turnRate );
-    }
-
-    inline void setSlipSkid( float slipSkid )
-    {
-        m_widgetTC->setSlipSkid( slipSkid );
-    }
-
-    inline void setClimbRate( float climbRate )
-    {
-        m_widgetVSI->setClimbRate( climbRate );
-    }
+    WidgetAI  * getAI  () { return _widgetAI;  }
+    WidgetALT * getALT () { return _widgetALT; }
+    WidgetASI * getASI () { return _widgetASI; }
+    WidgetHI  * getHI  () { return _widgetHI;  }
+    WidgetTC  * getTC  () { return _widgetTC ; }
+    WidgetVSI * getVSI () { return _widgetVSI; }
 
 private:
 
-    Ui::WidgetSix *m_ui;
+    Ui::WidgetSix *_ui;
 
-    WidgetADI *m_widgetADI;
-    WidgetALT *m_widgetALT;
-    WidgetASI *m_widgetASI;
-    WidgetHSI *m_widgetHSI;
-    WidgetTC  *m_widgetTC;
-    WidgetVSI *m_widgetVSI;
+    WidgetAI  *_widgetAI;
+    WidgetALT *_widgetALT;
+    WidgetASI *_widgetASI;
+    WidgetHI  *_widgetHI;
+    WidgetTC  *_widgetTC;
+    WidgetVSI *_widgetVSI;
 };
 
 ////////////////////////////////////////////////////////////////////////////////
