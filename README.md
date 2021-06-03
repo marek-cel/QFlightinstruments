@@ -3,7 +3,7 @@ QFlightinstruments is a collection of flight instruments Qt widgets.
 
 ## Components
 
-Project consists Qt flights instruments library and an example Qt GUI application.
+Project consists of Qt flights instruments library and an example Qt GUI application.
 
 ### Electronic Flight Instrument System
 
