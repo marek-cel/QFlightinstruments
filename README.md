@@ -37,7 +37,11 @@ Both projects share the same source code.
 
 ### Creating simple Qt application video
 
-[![Using QFlightinstruments](https://img.youtube.com/vi/3V6-1mbGpxw/0.jpg)](https://www.youtube.com/watch?v=3V6-1mbGpxw)
+<iframe width="560" height="315"
+src="https://www.youtube.com/watch?v=3V6-1mbGpxw" 
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
 
 ## See also
 
