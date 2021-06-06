@@ -37,7 +37,7 @@ Both projects share the same source code.
 
 ### Creating simple Qt application video
 
-[![Using QFlightinstruments](https://www.youtube.com/watch?v=3V6-1mbGpxw)](https://www.youtube.com/watch?v=3V6-1mbGpxw "Using QFlightinstruments")
+[![Using QFlightinstruments](https://img.youtube.com/vi/3V6-1mbGpxw/0.jpg)](https://www.youtube.com/watch?v=3V6-1mbGpxw)
 
 ## See also
 
