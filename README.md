@@ -35,4 +35,6 @@ Both projects share the same source code.
 
 ```libqfi.pro``` project files allows to create dynamic shared object containing instruments library.
 
+[![Using QFlightinstruments](https://img.youtube.com/vi/3V6-1mbGpxw/0.jpg)](https://www.youtube.com/watch?v=3V6-1mbGpxw)
+
 Visit [http://marekcel.pl/qflightinstruments](http://marekcel.pl/qflightinstruments) for more information.
