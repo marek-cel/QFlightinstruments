@@ -19,8 +19,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
  * IN THE SOFTWARE.
  ******************************************************************************/
-#ifndef COLORS_H
-#define COLORS_H
+#ifndef QFI_COLORS_H
+#define QFI_COLORS_H
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -31,7 +31,7 @@
 /**
  * @brief Colors class.
  */
-class Colors
+class qfi_Colors
 {
 public:
 
@@ -42,4 +42,4 @@ public:
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#endif // COLORS_H
+#endif // QFI_COLORS_H

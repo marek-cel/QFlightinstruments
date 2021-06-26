@@ -3,6 +3,8 @@
 
 /***************************************************************************//**
  * @author Marek M. Cel <marekcel@marekcel.pl>
+ * 
+ * Visit http://marekcel.pl/qflightinstruments for more information.
  *
  * @mainpage QFlightinstruments
  *

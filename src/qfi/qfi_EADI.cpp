@@ -190,8 +190,8 @@ void qfi_EADI::init()
     _itemFMA->setCacheMode( QGraphicsItem::NoCache );
     _itemFMA->setZValue( _textZ );
     _itemFMA->setTextInteractionFlags( Qt::NoTextInteraction );
-    _itemFMA->setDefaultTextColor( Colors::_lime );
-    _itemFMA->setFont( Fonts::medium() );
+    _itemFMA->setDefaultTextColor( qfi_Colors::_lime );
+    _itemFMA->setFont( qfi_Fonts::medium() );
     _itemFMA->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemFMA->moveBy( _scaleX * ( _originalFMA.x() - _itemFMA->boundingRect().width()  / 2.0 ),
                       _scaleY * ( _originalFMA.y() - _itemFMA->boundingRect().height() / 2.0 ) );
@@ -201,8 +201,8 @@ void qfi_EADI::init()
     _itemSPD->setCacheMode( QGraphicsItem::NoCache );
     _itemSPD->setZValue( _textZ );
     _itemSPD->setTextInteractionFlags( Qt::NoTextInteraction );
-    _itemSPD->setDefaultTextColor( Colors::_lime );
-    _itemSPD->setFont( Fonts::xsmall() );
+    _itemSPD->setDefaultTextColor( qfi_Colors::_lime );
+    _itemSPD->setFont( qfi_Fonts::xsmall() );
     _itemSPD->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemSPD->moveBy( _scaleX * ( _originalSPD.x() - _itemSPD->boundingRect().width()  / 2.0 ),
                       _scaleY * ( _originalSPD.y() - _itemSPD->boundingRect().height() / 2.0 ) );
@@ -212,8 +212,8 @@ void qfi_EADI::init()
     _itemLNAV->setCacheMode( QGraphicsItem::NoCache );
     _itemLNAV->setZValue( _textZ );
     _itemLNAV->setTextInteractionFlags( Qt::NoTextInteraction );
-    _itemLNAV->setDefaultTextColor( Colors::_lime );
-    _itemLNAV->setFont( Fonts::xsmall() );
+    _itemLNAV->setDefaultTextColor( qfi_Colors::_lime );
+    _itemLNAV->setFont( qfi_Fonts::xsmall() );
     _itemLNAV->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemLNAV->moveBy( _scaleX * ( _originalLNAV.x() - _itemLNAV->boundingRect().width()  / 2.0 ),
                        _scaleY * ( _originalLNAV.y() - _itemLNAV->boundingRect().height() / 2.0 ) );
@@ -223,8 +223,8 @@ void qfi_EADI::init()
     _itemVNAV->setCacheMode( QGraphicsItem::NoCache );
     _itemVNAV->setZValue( _textZ );
     _itemVNAV->setTextInteractionFlags( Qt::NoTextInteraction );
-    _itemVNAV->setDefaultTextColor( Colors::_lime );
-    _itemVNAV->setFont( Fonts::xsmall() );
+    _itemVNAV->setDefaultTextColor( qfi_Colors::_lime );
+    _itemVNAV->setFont( qfi_Fonts::xsmall() );
     _itemVNAV->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemVNAV->moveBy( _scaleX * ( _originalVNAV.x() - _itemVNAV->boundingRect().width()  / 2.0 ),
                        _scaleY * ( _originalVNAV.y() - _itemVNAV->boundingRect().height() / 2.0 ) );
@@ -234,8 +234,8 @@ void qfi_EADI::init()
     _itemLNAV_ARM->setCacheMode( QGraphicsItem::NoCache );
     _itemLNAV_ARM->setZValue( _textZ );
     _itemLNAV_ARM->setTextInteractionFlags( Qt::NoTextInteraction );
-    _itemLNAV_ARM->setDefaultTextColor( Colors::_white );
-    _itemLNAV_ARM->setFont( Fonts::xsmall() );
+    _itemLNAV_ARM->setDefaultTextColor( qfi_Colors::_white );
+    _itemLNAV_ARM->setFont( qfi_Fonts::xsmall() );
     _itemLNAV_ARM->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemLNAV_ARM->moveBy( _scaleX * ( _originalLNAV_ARM.x() - _itemLNAV_ARM->boundingRect().width()  / 2.0 ),
                            _scaleY * ( _originalLNAV_ARM.y() - _itemLNAV_ARM->boundingRect().height() / 2.0 ) );
@@ -245,8 +245,8 @@ void qfi_EADI::init()
     _itemVNAV_ARM->setCacheMode( QGraphicsItem::NoCache );
     _itemVNAV_ARM->setZValue( _textZ );
     _itemVNAV_ARM->setTextInteractionFlags( Qt::NoTextInteraction );
-    _itemVNAV_ARM->setDefaultTextColor( Colors::_white );
-    _itemVNAV_ARM->setFont( Fonts::xsmall() );
+    _itemVNAV_ARM->setDefaultTextColor( qfi_Colors::_white );
+    _itemVNAV_ARM->setFont( qfi_Fonts::xsmall() );
     _itemVNAV_ARM->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemVNAV_ARM->moveBy( _scaleX * ( _originalVNAV_ARM.x() - _itemVNAV_ARM->boundingRect().width()  / 2.0 ),
                            _scaleY * ( _originalVNAV_ARM.y() - _itemVNAV_ARM->boundingRect().height() / 2.0 ) );
@@ -1070,8 +1070,8 @@ void qfi_EADI::ALT::init( double scaleX, double scaleY )
     _itemLabel1 = new QGraphicsTextItem( QString( "99999" ) );
     _itemLabel1->setCacheMode( QGraphicsItem::NoCache );
     _itemLabel1->setZValue( _labelsZ );
-    _itemLabel1->setDefaultTextColor( Colors::_white );
-    _itemLabel1->setFont( Fonts::small() );
+    _itemLabel1->setDefaultTextColor( qfi_Colors::_white );
+    _itemLabel1->setFont( qfi_Fonts::small() );
     _itemLabel1->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemLabel1->moveBy( _scaleX * ( _originalLabelsX - _itemLabel1->boundingRect().width()  / 2.0 ),
                          _scaleY * ( _originalLabel1Y - _itemLabel1->boundingRect().height() / 2.0 ) );
@@ -1080,8 +1080,8 @@ void qfi_EADI::ALT::init( double scaleX, double scaleY )
     _itemLabel2 = new QGraphicsTextItem( QString( "99999" ) );
     _itemLabel2->setCacheMode( QGraphicsItem::NoCache );
     _itemLabel2->setZValue( _labelsZ );
-    _itemLabel2->setDefaultTextColor( Colors::_white );
-    _itemLabel2->setFont( Fonts::small() );
+    _itemLabel2->setDefaultTextColor( qfi_Colors::_white );
+    _itemLabel2->setFont( qfi_Fonts::small() );
     _itemLabel2->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemLabel2->moveBy( _scaleX * ( _originalLabelsX - _itemLabel2->boundingRect().width()  / 2.0 ),
                          _scaleY * ( _originalLabel2Y - _itemLabel2->boundingRect().height() / 2.0 ) );
@@ -1090,8 +1090,8 @@ void qfi_EADI::ALT::init( double scaleX, double scaleY )
     _itemLabel3 = new QGraphicsTextItem( QString( "99999" ) );
     _itemLabel3->setCacheMode( QGraphicsItem::NoCache );
     _itemLabel3->setZValue( _labelsZ );
-    _itemLabel3->setDefaultTextColor( Colors::_white );
-    _itemLabel3->setFont( Fonts::small() );
+    _itemLabel3->setDefaultTextColor( qfi_Colors::_white );
+    _itemLabel3->setFont( qfi_Fonts::small() );
     _itemLabel3->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemLabel3->moveBy( _scaleX * ( _originalLabelsX - _itemLabel3->boundingRect().width()  / 2.0 ),
                          _scaleY * ( _originalLabel3Y - _itemLabel3->boundingRect().height() / 2.0 ) );
@@ -1121,8 +1121,8 @@ void qfi_EADI::ALT::init( double scaleX, double scaleY )
     _itemAltitude = new QGraphicsTextItem( QString( "    0" ) );
     _itemAltitude->setCacheMode( QGraphicsItem::NoCache );
     _itemAltitude->setZValue( _frameTextZ );
-    _itemAltitude->setDefaultTextColor( Colors::_white );
-    _itemAltitude->setFont( Fonts::medium() );
+    _itemAltitude->setDefaultTextColor( qfi_Colors::_white );
+    _itemAltitude->setFont( qfi_Fonts::medium() );
     _itemAltitude->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemAltitude->moveBy( _scaleX * ( _originalAltitudeCtr.x() - _itemAltitude->boundingRect().width()  / 2.0 ),
                            _scaleY * ( _originalAltitudeCtr.y() - _itemAltitude->boundingRect().height() / 2.0 ) );
@@ -1131,8 +1131,8 @@ void qfi_EADI::ALT::init( double scaleX, double scaleY )
     _itemPressure = new QGraphicsTextItem( QString( "  STD  " ) );
     _itemPressure->setCacheMode( QGraphicsItem::NoCache );
     _itemPressure->setZValue( _frameTextZ );
-    _itemPressure->setDefaultTextColor( Colors::_lime );
-    _itemPressure->setFont( Fonts::medium() );
+    _itemPressure->setDefaultTextColor( qfi_Colors::_lime );
+    _itemPressure->setFont( qfi_Fonts::medium() );
     _itemPressure->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemPressure->moveBy( _scaleX * ( _originalPressureCtr.x() - _itemPressure->boundingRect().width()  / 2.0 ),
                            _scaleY * ( _originalPressureCtr.y() - _itemPressure->boundingRect().height() / 2.0 ) );
@@ -1141,8 +1141,8 @@ void qfi_EADI::ALT::init( double scaleX, double scaleY )
     _itemSetpoint = new QGraphicsTextItem( QString( "    0" ) );
     _itemSetpoint->setCacheMode( QGraphicsItem::NoCache );
     _itemSetpoint->setZValue( _frameTextZ );
-    _itemSetpoint->setDefaultTextColor( Colors::_magenta );
-    _itemSetpoint->setFont( Fonts::medium() );
+    _itemSetpoint->setDefaultTextColor( qfi_Colors::_magenta );
+    _itemSetpoint->setFont( qfi_Fonts::medium() );
     _itemSetpoint->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemSetpoint->moveBy( _scaleX * ( _originalAltitudeSet.x() - _itemAltitude->boundingRect().width()  / 2.0 ),
                            _scaleY * ( _originalAltitudeSet.y() - _itemAltitude->boundingRect().height() / 2.0 ) );
@@ -1479,8 +1479,8 @@ void qfi_EADI::ASI::init( double scaleX, double scaleY )
     _itemLabel1 = new QGraphicsTextItem( QString( "999" ) );
     _itemLabel1->setCacheMode( QGraphicsItem::NoCache );
     _itemLabel1->setZValue( _labelsZ );
-    _itemLabel1->setDefaultTextColor( Colors::_white );
-    _itemLabel1->setFont( Fonts::small() );
+    _itemLabel1->setDefaultTextColor( qfi_Colors::_white );
+    _itemLabel1->setFont( qfi_Fonts::small() );
     _itemLabel1->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemLabel1->moveBy( _scaleX * ( _originalLabelsX - _itemLabel1->boundingRect().width()  / 2.0 ),
                          _scaleY * ( _originalLabel1Y - _itemLabel1->boundingRect().height() / 2.0 ) );
@@ -1489,8 +1489,8 @@ void qfi_EADI::ASI::init( double scaleX, double scaleY )
     _itemLabel2 = new QGraphicsTextItem( QString( "999" ) );
     _itemLabel2->setCacheMode( QGraphicsItem::NoCache );
     _itemLabel2->setZValue( _labelsZ );
-    _itemLabel2->setDefaultTextColor( Colors::_white );
-    _itemLabel2->setFont( Fonts::small() );
+    _itemLabel2->setDefaultTextColor( qfi_Colors::_white );
+    _itemLabel2->setFont( qfi_Fonts::small() );
     _itemLabel2->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemLabel2->moveBy( _scaleX * ( _originalLabelsX - _itemLabel2->boundingRect().width()  / 2.0 ),
                          _scaleY * ( _originalLabel2Y - _itemLabel2->boundingRect().height() / 2.0 ) );
@@ -1499,8 +1499,8 @@ void qfi_EADI::ASI::init( double scaleX, double scaleY )
     _itemLabel3 = new QGraphicsTextItem( QString( "999" ) );
     _itemLabel3->setCacheMode( QGraphicsItem::NoCache );
     _itemLabel3->setZValue( _labelsZ );
-    _itemLabel3->setDefaultTextColor( Colors::_white );
-    _itemLabel3->setFont( Fonts::small() );
+    _itemLabel3->setDefaultTextColor( qfi_Colors::_white );
+    _itemLabel3->setFont( qfi_Fonts::small() );
     _itemLabel3->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemLabel3->moveBy( _scaleX * ( _originalLabelsX - _itemLabel3->boundingRect().width()  / 2.0 ),
                          _scaleY * ( _originalLabel3Y - _itemLabel3->boundingRect().height() / 2.0 ) );
@@ -1509,8 +1509,8 @@ void qfi_EADI::ASI::init( double scaleX, double scaleY )
     _itemLabel4 = new QGraphicsTextItem( QString( "999" ) );
     _itemLabel4->setCacheMode( QGraphicsItem::NoCache );
     _itemLabel4->setZValue( _labelsZ );
-    _itemLabel4->setDefaultTextColor( Colors::_white );
-    _itemLabel4->setFont( Fonts::small() );
+    _itemLabel4->setDefaultTextColor( qfi_Colors::_white );
+    _itemLabel4->setFont( qfi_Fonts::small() );
     _itemLabel4->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemLabel4->moveBy( _scaleX * ( _originalLabelsX - _itemLabel4->boundingRect().width()  / 2.0 ),
                          _scaleY * ( _originalLabel4Y - _itemLabel4->boundingRect().height() / 2.0 ) );
@@ -1519,8 +1519,8 @@ void qfi_EADI::ASI::init( double scaleX, double scaleY )
     _itemLabel5 = new QGraphicsTextItem( QString( "999" ) );
     _itemLabel5->setCacheMode( QGraphicsItem::NoCache );
     _itemLabel5->setZValue( _labelsZ );
-    _itemLabel5->setDefaultTextColor( Colors::_white );
-    _itemLabel5->setFont( Fonts::small() );
+    _itemLabel5->setDefaultTextColor( qfi_Colors::_white );
+    _itemLabel5->setFont( qfi_Fonts::small() );
     _itemLabel5->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemLabel5->moveBy( _scaleX * ( _originalLabelsX - _itemLabel5->boundingRect().width()  / 2.0 ),
                          _scaleY * ( _originalLabel5Y - _itemLabel5->boundingRect().height() / 2.0 ) );
@@ -1529,8 +1529,8 @@ void qfi_EADI::ASI::init( double scaleX, double scaleY )
     _itemLabel6 = new QGraphicsTextItem( QString( "999" ) );
     _itemLabel6->setCacheMode( QGraphicsItem::NoCache );
     _itemLabel6->setZValue( _labelsZ );
-    _itemLabel6->setDefaultTextColor( Colors::_white );
-    _itemLabel6->setFont( Fonts::small() );
+    _itemLabel6->setDefaultTextColor( qfi_Colors::_white );
+    _itemLabel6->setFont( qfi_Fonts::small() );
     _itemLabel6->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemLabel6->moveBy( _scaleX * ( _originalLabelsX - _itemLabel6->boundingRect().width()  / 2.0 ),
                          _scaleY * ( _originalLabel6Y - _itemLabel6->boundingRect().height() / 2.0 ) );
@@ -1539,8 +1539,8 @@ void qfi_EADI::ASI::init( double scaleX, double scaleY )
     _itemLabel7 = new QGraphicsTextItem( QString( "999" ) );
     _itemLabel7->setCacheMode( QGraphicsItem::NoCache );
     _itemLabel7->setZValue( _labelsZ );
-    _itemLabel7->setDefaultTextColor( Colors::_white );
-    _itemLabel7->setFont( Fonts::small() );
+    _itemLabel7->setDefaultTextColor( qfi_Colors::_white );
+    _itemLabel7->setFont( qfi_Fonts::small() );
     _itemLabel7->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemLabel7->moveBy( _scaleX * ( _originalLabelsX - _itemLabel7->boundingRect().width()  / 2.0 ),
                          _scaleY * ( _originalLabel7Y - _itemLabel7->boundingRect().height() / 2.0 ) );
@@ -1578,8 +1578,8 @@ void qfi_EADI::ASI::init( double scaleX, double scaleY )
     _itemAirspeed->setCacheMode( QGraphicsItem::NoCache );
     _itemAirspeed->setZValue( _frameTextZ );
     _itemAirspeed->setTextInteractionFlags( Qt::NoTextInteraction );
-    _itemAirspeed->setDefaultTextColor( Colors::_white );
-    _itemAirspeed->setFont( Fonts::medium() );
+    _itemAirspeed->setDefaultTextColor( qfi_Colors::_white );
+    _itemAirspeed->setFont( qfi_Fonts::medium() );
     _itemAirspeed->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemAirspeed->moveBy( _scaleX * ( _originalAirspeedCtr.x() - _itemAirspeed->boundingRect().width()  / 2.0 ),
                            _scaleY * ( _originalAirspeedCtr.y() - _itemAirspeed->boundingRect().height() / 2.0 ) );
@@ -1589,8 +1589,8 @@ void qfi_EADI::ASI::init( double scaleX, double scaleY )
     _itemMachNo->setCacheMode( QGraphicsItem::NoCache );
     _itemMachNo->setZValue( _frameTextZ );
     _itemMachNo->setTextInteractionFlags( Qt::NoTextInteraction );
-    _itemMachNo->setDefaultTextColor( Colors::_white );
-    _itemMachNo->setFont( Fonts::medium() );
+    _itemMachNo->setDefaultTextColor( qfi_Colors::_white );
+    _itemMachNo->setFont( qfi_Fonts::medium() );
     _itemMachNo->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemMachNo->moveBy( _scaleX * ( _originalMachNoCtr.x() - _itemMachNo->boundingRect().width()  / 2.0 ),
                          _scaleY * ( _originalMachNoCtr.y() - _itemMachNo->boundingRect().height() / 2.0 ) );
@@ -1600,8 +1600,8 @@ void qfi_EADI::ASI::init( double scaleX, double scaleY )
     _itemSetpoint->setCacheMode( QGraphicsItem::NoCache );
     _itemSetpoint->setZValue( _frameTextZ );
     _itemSetpoint->setTextInteractionFlags( Qt::NoTextInteraction );
-    _itemSetpoint->setDefaultTextColor( Colors::_magenta );
-    _itemSetpoint->setFont( Fonts::medium() );
+    _itemSetpoint->setDefaultTextColor( qfi_Colors::_magenta );
+    _itemSetpoint->setFont( qfi_Fonts::medium() );
     _itemSetpoint->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemSetpoint->moveBy( _scaleX * ( _originalAirspeedSet.x() - _itemMachNo->boundingRect().width()  / 2.0 ),
                            _scaleY * ( _originalAirspeedSet.y() - _itemMachNo->boundingRect().height() / 2.0 ) );
@@ -1991,8 +1991,8 @@ void qfi_EADI::HDG::init( double scaleX, double scaleY )
     _itemFrameText->setCacheMode( QGraphicsItem::NoCache );
     _itemFrameText->setZValue( _frameTextZ );
     _itemFrameText->setTextInteractionFlags( Qt::NoTextInteraction );
-    _itemFrameText->setDefaultTextColor( Colors::_white );
-    _itemFrameText->setFont( Fonts::medium() );
+    _itemFrameText->setDefaultTextColor( qfi_Colors::_white );
+    _itemFrameText->setFont( qfi_Fonts::medium() );
     _itemFrameText->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemFrameText->moveBy( _scaleX * ( _originalFrameTextCtr.x() - _itemFrameText->boundingRect().width()  / 2.0 ),
                             _scaleY * ( _originalFrameTextCtr.y() - _itemFrameText->boundingRect().height() / 2.0 ) );

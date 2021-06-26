@@ -310,8 +310,8 @@ void qfi_EHSI::init()
     _itemCrsText = new QGraphicsTextItem( QString( "CRS 999" ) );
     _itemCrsText->setCacheMode( QGraphicsItem::NoCache );
     _itemCrsText->setZValue( _crsTextZ );
-    _itemCrsText->setDefaultTextColor( Colors::_lime );
-    _itemCrsText->setFont( Fonts::medium() );
+    _itemCrsText->setDefaultTextColor( qfi_Colors::_lime );
+    _itemCrsText->setFont( qfi_Fonts::medium() );
     _itemCrsText->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemCrsText->moveBy( _scaleX * ( _originalCrsTextCtr.x() - _itemCrsText->boundingRect().width()  / 2.0 ),
                           _scaleY * ( _originalCrsTextCtr.y() - _itemCrsText->boundingRect().height() / 2.0 ) );
@@ -320,8 +320,8 @@ void qfi_EHSI::init()
     _itemHdgText = new QGraphicsTextItem( QString( "HDG 999" ) );
     _itemHdgText->setCacheMode( QGraphicsItem::NoCache );
     _itemHdgText->setZValue( _hdgTextZ );
-    _itemHdgText->setDefaultTextColor( Colors::_magenta );
-    _itemHdgText->setFont( Fonts::medium() );
+    _itemHdgText->setDefaultTextColor( qfi_Colors::_magenta );
+    _itemHdgText->setFont( qfi_Fonts::medium() );
     _itemHdgText->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemHdgText->moveBy( _scaleX * ( _originalHdgTextCtr.x() - _itemHdgText->boundingRect().width()  / 2.0 ),
                           _scaleY * ( _originalHdgTextCtr.y() - _itemHdgText->boundingRect().height() / 2.0 ) );
@@ -330,8 +330,8 @@ void qfi_EHSI::init()
     _itemDmeText = new QGraphicsTextItem( QString( "99.9 NM" ) );
     _itemDmeText->setCacheMode( QGraphicsItem::NoCache );
     _itemDmeText->setZValue( _dmeTextZ );
-    _itemDmeText->setDefaultTextColor( Colors::_white );
-    _itemDmeText->setFont( Fonts::medium() );
+    _itemDmeText->setDefaultTextColor( qfi_Colors::_white );
+    _itemDmeText->setFont( qfi_Fonts::medium() );
     _itemDmeText->setTransform( QTransform::fromScale( _scaleX, _scaleY ), true );
     _itemDmeText->moveBy( _scaleX * ( _originalDmeTextCtr.x() - _itemDmeText->boundingRect().width()  / 2.0 ),
                           _scaleY * ( _originalDmeTextCtr.y() - _itemDmeText->boundingRect().height() / 2.0 ) );

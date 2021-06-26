@@ -39,7 +39,7 @@ class qfi_HI : public QGraphicsView
 public:
 
     /** Constructor. */
-    qfi_HI( QWidget *parent = Q_NULLPTR );
+    explicit qfi_HI( QWidget *parent = Q_NULLPTR );
 
     /** Destructor. */
     virtual ~qfi_HI();

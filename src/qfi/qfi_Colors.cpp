@@ -24,6 +24,6 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-const QColor Colors::_lime    = QColor(   0, 255,   0 );
-const QColor Colors::_magenta = QColor( 255,   0, 255 );
-const QColor Colors::_white   = QColor( 255, 255, 255 );
+const QColor qfi_Colors::_lime    = QColor(   0, 255,   0 );
+const QColor qfi_Colors::_magenta = QColor( 255,   0, 255 );
+const QColor qfi_Colors::_white   = QColor( 255, 255, 255 );

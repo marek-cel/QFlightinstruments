@@ -19,8 +19,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
  * IN THE SOFTWARE.
  ******************************************************************************/
-#ifndef FONTS_H
-#define FONTS_H
+#ifndef QFI_FONTS_H
+#define QFI_FONTS_H
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -31,7 +31,7 @@
 /**
  * @brief Fonts class.
  */
-class Fonts
+class qfi_Fonts
 {
 public:
 
@@ -66,4 +66,4 @@ private:
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#endif // FONTS_H
+#endif // QFI_FONTS_H

@@ -24,15 +24,15 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-QFont Fonts::_xsmall = QFont();
-QFont Fonts::_small  = QFont();
-QFont Fonts::_medium = QFont();
+QFont qfi_Fonts::_xsmall = QFont();
+QFont qfi_Fonts::_small  = QFont();
+QFont qfi_Fonts::_medium = QFont();
 
-bool Fonts::_inited = false;
+bool qfi_Fonts::_inited = false;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-void Fonts::init()
+void qfi_Fonts::init()
 {
     _inited = true;
 
