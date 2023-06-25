@@ -1,5 +1,5 @@
 /****************************************************************************//*
- * Copyright (C) 2021 Marek M. Cel
+ * Copyright (C) 2023 Marek M. Cel
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the "Software"),
@@ -19,29 +19,31 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
  * IN THE SOFTWARE.
  ******************************************************************************/
-#ifndef QFI_COLORS_H
-#define QFI_COLORS_H
+#ifndef QFI_DEFS_H
+#define QFI_DEFS_H
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#include <QColor>
+#if defined(_MSC_VER)
+#   if defined(QFI_DLL_EXPORTS)
+#       define QFI_DLL_SPEC __declspec(dllexport)
+#   elif defined(QFI_DLL_IMPORTS)
+#       define QFI_DLL_SPEC __declspec(dllimport)
+#   else
+#       define QFI_DLL_SPEC
+#   endif
+#else
+#    define QFI_DLL_SPEC
+#endif
 
-#include <qfi/qfi_defs.h>
+#if defined(__cplusplus)
+#   define QFIAPI QFI_DLL_SPEC
+#endif
+
+#if !defined(QFIAPI)
+#   define QFIAPI
+#endif
 
 ////////////////////////////////////////////////////////////////////////////////
 
-/**
- * @brief Colors class.
- */
-class QFIAPI qfi_Colors
-{
-public:
-
-    static const QColor _lime;
-    static const QColor _magenta;
-    static const QColor _white;
-};
-
-////////////////////////////////////////////////////////////////////////////////
-
-#endif // QFI_COLORS_H
+#endif // QFI_DEFS_H

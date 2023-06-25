@@ -27,12 +27,14 @@
 #include <QGraphicsView>
 #include <QGraphicsSvgItem>
 
+#include <qfi/qfi_defs.h>
+
 ////////////////////////////////////////////////////////////////////////////////
 
 /**
  * @brief This class provides EHSI widget class.
  */
-class qfi_EHSI : public QGraphicsView
+class QFIAPI qfi_EHSI : public QGraphicsView
 {
     Q_OBJECT
 

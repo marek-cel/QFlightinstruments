@@ -19,7 +19,7 @@ win32: QMAKE_LFLAGS += /INCREMENTAL:NO
 
 ################################################################################
 
-DEFINES += QFI_LIBRARY
+DEFINES += QFI_DLL_EXPORTS
 
 DEFINES += QT_DEPRECATED_WARNINGS
 

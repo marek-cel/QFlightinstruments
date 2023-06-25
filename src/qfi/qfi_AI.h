@@ -27,12 +27,14 @@
 #include <QGraphicsView>
 #include <QGraphicsSvgItem>
 
+#include <qfi/qfi_defs.h>
+
 ////////////////////////////////////////////////////////////////////////////////
 
 /**
  * @brief Attitude Indicator widget class.
  */
-class qfi_AI : public QGraphicsView
+class QFIAPI qfi_AI : public QGraphicsView
 {
     Q_OBJECT
 

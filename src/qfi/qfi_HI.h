@@ -27,12 +27,14 @@
 #include <QGraphicsView>
 #include <QGraphicsSvgItem>
 
+#include <qfi/qfi_defs.h>
+
 ////////////////////////////////////////////////////////////////////////////////
 
 /**
  * @brief Horizontal Indicator widget class.
  */
-class qfi_HI : public QGraphicsView
+class QFIAPI qfi_HI : public QGraphicsView
 {
     Q_OBJECT
 

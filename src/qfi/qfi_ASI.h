@@ -27,12 +27,14 @@
 #include <QGraphicsView>
 #include <QGraphicsSvgItem>
 
+#include <qfi/qfi_defs.h>
+
 ////////////////////////////////////////////////////////////////////////////////
 
 /**
  * @brief Airspeed Indicator widget class.
  */
-class qfi_ASI : public QGraphicsView
+class QFIAPI qfi_ASI : public QGraphicsView
 {
     Q_OBJECT
 

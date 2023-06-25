@@ -27,12 +27,14 @@
 #include <QGraphicsView>
 #include <QGraphicsSvgItem>
 
+#include <qfi/qfi_defs.h>
+
 ////////////////////////////////////////////////////////////////////////////////
 
 /**
  * @brief Turn Coordinator widget class.
  */
-class qfi_TC : public QGraphicsView
+class QFIAPI qfi_TC : public QGraphicsView
 {
     Q_OBJECT
 

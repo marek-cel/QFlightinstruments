@@ -22,6 +22,8 @@ win32: QMAKE_LFLAGS += /INCREMENTAL:NO
 
 ################################################################################
 
+DEFINES += QFI_DLL_IMPORTS
+
 DEFINES += QT_DEPRECATED_WARNINGS
 
 greaterThan(QT_MAJOR_VERSION, 4):win32: DEFINES += USE_QT5

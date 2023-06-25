@@ -27,12 +27,14 @@
 #include <QGraphicsView>
 #include <QGraphicsSvgItem>
 
+#include <qfi/qfi_defs.h>
+
 ////////////////////////////////////////////////////////////////////////////////
 
 /**
  * @brief Barometric Altimeter widget class.
  */
-class qfi_ALT : public QGraphicsView
+class QFIAPI qfi_ALT : public QGraphicsView
 {
     Q_OBJECT
 

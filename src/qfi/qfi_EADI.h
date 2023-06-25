@@ -28,12 +28,14 @@
 #include <QGraphicsRectItem>
 #include <QGraphicsSvgItem>
 
+#include <qfi/qfi_defs.h>
+
 ////////////////////////////////////////////////////////////////////////////////
 
 /**
  * @brief This class provides EADI widget class.
  */
-class qfi_EADI : public QGraphicsView
+class QFIAPI qfi_EADI : public QGraphicsView
 {
     Q_OBJECT
 

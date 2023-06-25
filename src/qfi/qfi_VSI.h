@@ -27,12 +27,14 @@
 #include <QGraphicsView>
 #include <QGraphicsSvgItem>
 
+#include <qfi/qfi_defs.h>
+
 ////////////////////////////////////////////////////////////////////////////////
 
 /**
  * @brief Vertical Speed Indicator widget class.
  */
-class qfi_VSI : public QGraphicsView
+class QFIAPI qfi_VSI : public QGraphicsView
 {
     Q_OBJECT
 

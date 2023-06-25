@@ -26,12 +26,14 @@
 
 #include <QFont>
 
+#include <qfi/qfi_defs.h>
+
 ////////////////////////////////////////////////////////////////////////////////
 
 /**
  * @brief Fonts class.
  */
-class qfi_Fonts
+class QFIAPI qfi_Fonts
 {
 public:
 
