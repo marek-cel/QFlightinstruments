@@ -92,7 +92,7 @@ Qt::Orientations LayoutSquare::expandingDirections() const
 
 ////////////////////////////////////////////////////////////////////////////////
 
-QRect LayoutSquare::geometry()
+QRect LayoutSquare::geometry() const
 {
     return (QRect)(*_geometry);
 }
