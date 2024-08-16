@@ -1,6 +1,12 @@
-QT += core gui svg
+QT += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+greaterThan(QT_MAJOR_VERSION, 5) {
+    QT += svgwidgets
+} else {
+    QT += svg
+}
 
 TEMPLATE = app
 
