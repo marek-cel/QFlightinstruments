@@ -242,18 +242,28 @@ QPoint LayoutSquare::calculateCenterPnt( QSize fromSize, QSize itemSize ) const
 QSize LayoutSquare::calculateProperSize( QSize fromSize ) const
 {
     QSize resultSize;
-    
-    if ( fromSize.height() < fromSize.width() )
-    {
-        resultSize.setHeight ( fromSize.height() - margin() );
-        resultSize.setWidth  ( fromSize.height() - margin() );
+
+#if QT_VERSION_MAJOR >= 6
+    QMargins margins = contentsMargins();
+    if (fromSize.height() < fromSize.width()) {
+        // TODO Consider using all margins
+        resultSize.setHeight(fromSize.height() - margins.top());
+        resultSize.setWidth(fromSize.height() - margins.right());
+    } else {
+        // TODO Consider using all margins
+        resultSize.setHeight(fromSize.width() - margins.top());
+        resultSize.setWidth(fromSize.width() - margins.right());
     }
-    else
-    {
-        resultSize.setHeight ( fromSize.width() - margin() );
-        resultSize.setWidth  ( fromSize.width() - margin() );
+#else
+    if (fromSize.height() < fromSize.width()) {
+        resultSize.setHeight(fromSize.height() - margin());
+        resultSize.setWidth(fromSize.height() - margin());
+    } else {
+        resultSize.setHeight(fromSize.width() - margin());
+        resultSize.setWidth(fromSize.width() - margin());
     }
-    
+#endif
+
     return resultSize;
 }
 
