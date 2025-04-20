@@ -1,3 +1,10 @@
+2025-04-20 Marek M. Cel <marekcel@marekcel.pl>
+
+    * separating library source files from the example
+    * CMake based building added
+
+
+
 2021-06-03 Marek M. Cel <marekcel@marekcel.pl>
 
     * major reorganization
