@@ -7,7 +7,7 @@ TEMPLATE = app
 ################################################################################
 
 DESTDIR = $$PWD/../bin
-TARGET = qfi_example1
+TARGET = qfi_example
 
 ################################################################################
 
@@ -21,6 +21,8 @@ unix:  CONFIG(release, debug|release): QMAKE_CXXFLAGS += -O2
 win32: QMAKE_LFLAGS += /INCREMENTAL:NO
 
 ################################################################################
+
+DEFINES += QFI_DLL_IMPORTS
 
 DEFINES += QT_DEPRECATED_WARNINGS
 
@@ -41,9 +43,51 @@ unix: DEFINES += _LINUX_
 
 ################################################################################
 
-INCLUDEPATH += ./
+INCLUDEPATH += . ..
 
 ################################################################################
 
-include($$PWD/example/example.pri)
-include($$PWD/qfi/qfi.pri)
+LIBS += \
+    -L$$PWD/../lib \
+    -lqfi
+
+################################################################################
+
+HEADERS += \
+    $$PWD/LayoutSquare.h \
+    $$PWD/MainWindow.h \
+    $$PWD/WidgetAI.h \
+    $$PWD/WidgetALT.h \
+    $$PWD/WidgetASI.h \
+    $$PWD/WidgetEADI.h \
+    $$PWD/WidgetEHSI.h \
+    $$PWD/WidgetHI.h \
+    $$PWD/WidgetTC.h \
+    $$PWD/WidgetVSI.h \
+    $$PWD/WidgetSix.h
+
+SOURCES += \
+    $$PWD/main.cpp \
+    $$PWD/LayoutSquare.cpp \
+    $$PWD/MainWindow.cpp \
+    $$PWD/WidgetAI.cpp \
+    $$PWD/WidgetALT.cpp \
+    $$PWD/WidgetASI.cpp \
+    $$PWD/WidgetEADI.cpp \
+    $$PWD/WidgetEHSI.cpp \
+    $$PWD/WidgetHI.cpp \
+    $$PWD/WidgetTC.cpp \
+    $$PWD/WidgetVSI.cpp \
+    $$PWD/WidgetSix.cpp
+
+FORMS += \
+    $$PWD/MainWindow.ui \
+    $$PWD/WidgetAI.ui \
+    $$PWD/WidgetALT.ui \
+    $$PWD/WidgetASI.ui \
+    $$PWD/WidgetEADI.ui \
+    $$PWD/WidgetEHSI.ui \
+    $$PWD/WidgetHI.ui \
+    $$PWD/WidgetTC.ui \
+    $$PWD/WidgetVSI.ui \
+    $$PWD/WidgetSix.ui

@@ -1,0 +1,99 @@
+{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "linux-common-conf",
+            "hidden": true,
+            "binaryDir": "${sourceDir}/build",
+            "generator": "Unix Makefiles",
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Linux"
+            }
+        },
+        {
+            "name": "linux-debug-conf",
+            "inherits": "linux-common-conf",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "BUILD_EXAMPLE": "ON"
+            }
+        },
+        {
+            "name": "linux-release-conf",
+            "inherits": "linux-common-conf",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "BUILD_EXAMPLE": "ON"
+            }
+        },
+        {
+            "name": "windows-common-conf",
+            "hidden": true,
+            "binaryDir": "${sourceDir}/build",
+            "generator": "Visual Studio 17 2022",
+            "architecture": "x64",
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+            },
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Windows"
+            }
+        },
+        {
+            "name": "windows-debug-conf",
+            "inherits": "windows-common-conf",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "BUILD_EXAMPLE": "ON"
+            }
+        },
+        {
+            "name": "windows-release-conf",
+            "inherits": "windows-common-conf",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "BUILD_EXAMPLE": "ON"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name" : "linux-common-build",
+            "hidden": true,
+            "targets": ["all", "qfi_example"]
+        },
+        {
+            "name": "linux-debug-build",
+            "inherits": "linux-common-build",
+            "configurePreset": "linux-debug-conf",
+            "configuration": "Debug"
+        },
+        {
+            "name": "linux-release-build",
+            "inherits": "linux-common-build",
+            "configurePreset": "linux-release-conf",
+            "configuration": "Release"
+        },
+        {
+            "name" : "windows-common-build",
+            "hidden": true,
+            "targets": ["ALL_BUILD", "qfi_example"]
+        },
+        {
+            "name": "windows-debug-build",
+            "inherits": "windows-common-build",
+            "configurePreset": "windows-debug-conf",
+            "configuration": "Debug"
+        },
+        {
+            "name": "windows-release-build",
+            "inherits": "windows-common-build",
+            "configurePreset": "windows-release-conf",
+            "configuration": "Release"
+        }
+    ]
+}
